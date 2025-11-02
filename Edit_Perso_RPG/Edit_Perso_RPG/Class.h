@@ -10,6 +10,7 @@ protected:
     int IntelligenceBonus;
     int AgilityBonus;
 };
+
 class Warrior : public Class {
     Warrior();
 };
