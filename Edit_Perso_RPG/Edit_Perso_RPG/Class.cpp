@@ -1,10 +1,10 @@
 #include "Class.h"
 Class::Class() {
-    HealthBonus = 0;
-    ManaBonus = 0;
-    StrengthBonus = 0;
-    IntelligenceBonus = 0;
-    AgilityBonus = 0;
+    HealthBonus = 0;        // Bonus Life Point
+    ManaBonus = 0;          // Bonus Magic Energy
+    StrengthBonus = 0;      // Bonus Physical Power
+    IntelligenceBonus = 0;  // Bonus Magical Power
+    AgilityBonus = 0;       // Bonus Speed and Dexterity
 }
 
 Warrior::Warrior() {

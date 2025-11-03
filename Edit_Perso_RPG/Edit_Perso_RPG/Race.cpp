@@ -1,12 +1,12 @@
 #include "Race.h"
 Race::Race() {
-	MaxHealth = 100;
-	Health = 100;
-	MaxMana = 100;
-	Mana = 100;
-	Strength = 1;
-	Intelligence = 10;
-	Agility = 10;
+	MaxHealth = 100;	// Maximum Life Point
+	Health = 100;		// Actual Life Point
+	MaxMana = 100;		// Maximum Magic Energy
+	Mana = 100;			// Actual Magic Energy
+	Strength = 1;		// Physical Power
+	Intelligence = 10;	// Magical Power
+	Agility = 10;		// Speed and dexterity
 }
 
 Elf::Elf() {
