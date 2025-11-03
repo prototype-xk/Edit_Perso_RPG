@@ -1,6 +1,8 @@
 #include <iostream>
+#include "Player.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Player Joueur = Player();
+    std::cout << Joueur.Tostring();
 }
