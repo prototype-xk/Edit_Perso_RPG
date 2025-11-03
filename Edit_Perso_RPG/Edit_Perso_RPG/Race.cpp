@@ -10,92 +10,92 @@ Race::Race() {
 }
 
 Elf::Elf() {
-	MaxHealth = 80;
-	Health = 80;
+	MaxHealth = 90;
+	Health = MaxHealth;
 	MaxMana = 120;
-	Mana = 120;
+	Mana = MaxMana;
 	Strength = 8;
-	Intelligence = 18;
-	Agility = 15;
+	Intelligence = 17;
+	Agility = 14;
 }
 Dwarf::Dwarf() {
-	MaxHealth = 130;
-	Health = 130;
-	MaxMana = 40;
-	Mana = 40;
-	Strength = 15;
+	MaxHealth = 140;
+	Health = MaxHealth;
+	MaxMana = 50;
+	Mana = MaxMana;
+	Strength = 16;
 	Intelligence = 8;
 	Agility = 7;
 }
 Human::Human() {
-	MaxHealth = 100;
-	Health = 100;
-	MaxMana = 60;
-	Mana = 60;
+	MaxHealth = 110;
+	Health = MaxHealth;
+	MaxMana = 70;
+	Mana = MaxMana;
 	Strength = 10;
 	Intelligence = 10;
 	Agility = 10;
 }
 Orc::Orc() {
 	MaxHealth = 150;
-	Health = 150;
-	MaxMana = 30;
-	Mana = 30;
-	Strength = 20;
-	Intelligence = 6;
-	Agility = 8;
+	Health = MaxHealth;
+	MaxMana = 40;
+	Mana = MaxMana;
+	Strength = 19;
+	Intelligence = 7;
+	Agility = 9;
 }
 Fairy::Fairy() {
-	MaxHealth = 60;
-	Health = 60;
-	MaxMana = 150;
-	Mana = 150;
+	MaxHealth = 70;
+	Health = MaxHealth;
+	MaxMana = 160;
+	Mana = MaxMana;
 	Strength = 5;
-	Intelligence = 20;
+	Intelligence = 19;
 	Agility = 18;
 }
 Undead::Undead() {
-	MaxHealth = 90;
-	Health = 90;
-	MaxMana = 70;
-	Mana = 70;
+	MaxHealth = 100;
+	Health = MaxHealth;
+	MaxMana = 80;
+	Mana = MaxMana;
 	Strength = 12;
 	Intelligence = 12;
-	Agility = 9;
+	Agility = 10;
 }
 Draconian::Draconian() {
-	MaxHealth = 180;
-	Health = 180;
-	MaxMana = 80;
-	Mana = 80;
-	Strength = 22;
+	MaxHealth = 160;
+	Health = MaxHealth;
+	MaxMana = 90;
+	Mana = MaxMana;
+	Strength = 20;
 	Intelligence = 14;
-	Agility = 11;
+	Agility = 10;
 }
 WereWolf::WereWolf() {
-	MaxHealth = 140;
-	Health = 140;
-	MaxMana = 40;
-	Mana = 40;
-	Strength = 18;
+	MaxHealth = 130;
+	Health = MaxHealth;
+	MaxMana = 50;
+	Mana = MaxMana;
+	Strength = 17;
 	Intelligence = 9;
-	Agility = 16;
+	Agility = 15;
 }
 HighElf::HighElf() {
-	MaxHealth = 90;
-	Health = 90;
-	MaxMana = 160;
-	Mana = 160;
-	Strength = 7;
-	Intelligence = 22;
-	Agility = 14;
+	MaxHealth = 100;
+	Health = MaxHealth;
+	MaxMana = 150;
+	Mana = MaxMana;
+	Strength = 8;
+	Intelligence = 21;
+	Agility = 13;
 }
 Serpentfolk::Serpentfolk() {
-	MaxHealth = 90;
-	Health = 90;
-	MaxMana = 100;
-	Mana = 100;
+	MaxHealth = 100;
+	Health = MaxHealth;
+	MaxMana = 110;
+	Mana = MaxMana;
 	Strength = 9;
-	Intelligence = 17;
+	Intelligence = 16;
 	Agility = 13;
 }
