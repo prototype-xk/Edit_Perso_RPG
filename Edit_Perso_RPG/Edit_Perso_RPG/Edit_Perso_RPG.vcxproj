@@ -133,7 +133,6 @@
     <ClCompile Include="Edit_Perso_RPG.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Opponent.cpp" />
-    <ClCompile Include="Personnalite.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Race.cpp" />
     <ClCompile Include="Random.cpp" />
@@ -144,7 +143,6 @@
     <ClInclude Include="Class.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Opponent.h" />
-    <ClInclude Include="Personnalite.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Race.h" />
     <ClInclude Include="Random.h" />
