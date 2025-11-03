@@ -1,5 +1,6 @@
 #include "Race.h"
 Race::Race() {
+	RaceName = "Nothing";
 	MaxHealth = 100;	// Maximum Life Point
 	Health = 100;		// Actual Life Point
 	MaxMana = 100;		// Maximum Magic Energy
@@ -9,93 +10,164 @@ Race::Race() {
 	Agility = 10;		// Speed and dexterity
 }
 
-Elf::Elf() {
-	MaxHealth = 90;
-	Health = MaxHealth;
-	MaxMana = 120;
-	Mana = MaxMana;
-	Strength = 8;
-	Intelligence = 17;
-	Agility = 14;
+Race Elf() {
+	Race r;
+	r.RaceName = "Elf";
+	r.MaxHealth = 90;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 120;
+	r.Mana = r.MaxMana;
+	r.Strength = 8;
+	r.Intelligence = 17;
+	r.Agility = 14;
+	return r;
 }
-Dwarf::Dwarf() {
-	MaxHealth = 140;
-	Health = MaxHealth;
-	MaxMana = 50;
-	Mana = MaxMana;
-	Strength = 16;
-	Intelligence = 8;
-	Agility = 7;
+Race Dwarf() {
+	Race r;
+	r.RaceName = "Dwarf";
+	r.MaxHealth = 140;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 50;
+	r.Mana = r.MaxMana;
+	r.Strength = 16;
+	r.Intelligence = 8;
+	r.Agility = 7;
+	return r;
 }
-Human::Human() {
-	MaxHealth = 110;
-	Health = MaxHealth;
-	MaxMana = 70;
-	Mana = MaxMana;
-	Strength = 10;
-	Intelligence = 10;
-	Agility = 10;
+Race Human() {
+	Race r;
+	r.RaceName = "Human";
+	r.MaxHealth = 110;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 70;
+	r.Mana = r.MaxMana;
+	r.Strength = 10;
+	r.Intelligence = 10;
+	r.Agility = 10;
+	return r;
 }
-Orc::Orc() {
-	MaxHealth = 150;
-	Health = MaxHealth;
-	MaxMana = 40;
-	Mana = MaxMana;
-	Strength = 19;
-	Intelligence = 7;
-	Agility = 9;
+Race Orc() {
+	Race r;
+	r.RaceName = "Orc";
+	r.MaxHealth = 150;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 40;
+	r.Mana = r.MaxMana;
+	r.Strength = 19;
+	r.Intelligence = 7;
+	r.Agility = 9;
+	return r;
 }
-Fairy::Fairy() {
-	MaxHealth = 70;
-	Health = MaxHealth;
-	MaxMana = 160;
-	Mana = MaxMana;
-	Strength = 5;
-	Intelligence = 19;
-	Agility = 18;
+Race Fairy() {
+	Race r;
+	r.RaceName = "Fairy";
+	r.MaxHealth = 70;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 160;
+	r.Mana = r.MaxMana;
+	r.Strength = 5;
+	r.Intelligence = 19;
+	r.Agility = 18;
+	return r;
 }
-Undead::Undead() {
-	MaxHealth = 100;
-	Health = MaxHealth;
-	MaxMana = 80;
-	Mana = MaxMana;
-	Strength = 12;
-	Intelligence = 12;
-	Agility = 10;
+Race Undead() {
+	Race r;
+	r.RaceName = "Undead";
+	r.MaxHealth = 100;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 80;
+	r.Mana = r.MaxMana;
+	r.Strength = 12;
+	r.Intelligence = 12;
+	r.Agility = 10;
+	return r;
 }
-Draconian::Draconian() {
-	MaxHealth = 160;
-	Health = MaxHealth;
-	MaxMana = 90;
-	Mana = MaxMana;
-	Strength = 20;
-	Intelligence = 14;
-	Agility = 10;
+Race Draconian() {
+	Race r;
+	r.RaceName = "Draconian";
+	r.MaxHealth = 160;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 90;
+	r.Mana = r.MaxMana;
+	r.Strength = 20;
+	r.Intelligence = 14;
+	r.Agility = 10;
+	return r;
 }
-WereWolf::WereWolf() {
-	MaxHealth = 130;
-	Health = MaxHealth;
-	MaxMana = 50;
-	Mana = MaxMana;
-	Strength = 17;
-	Intelligence = 9;
-	Agility = 15;
+Race WereWolf() {
+	Race r;
+	r.RaceName = "WereWolf";
+	r.MaxHealth = 130;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 50;
+	r.Mana = r.MaxMana;
+	r.Strength = 17;
+	r.Intelligence = 9;
+	r.Agility = 15;
+	return r;
 }
-HighElf::HighElf() {
-	MaxHealth = 100;
-	Health = MaxHealth;
-	MaxMana = 150;
-	Mana = MaxMana;
-	Strength = 8;
-	Intelligence = 21;
-	Agility = 13;
+Race HighElf() {
+	Race r;
+	r.RaceName = "HighElf";
+	r.MaxHealth = 100;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 150;
+	r.Mana = r.MaxMana;
+	r.Strength = 8;
+	r.Intelligence = 21;
+	r.Agility = 13;
+	return r;
 }
-Serpentfolk::Serpentfolk() {
-	MaxHealth = 100;
-	Health = MaxHealth;
-	MaxMana = 110;
-	Mana = MaxMana;
-	Strength = 9;
-	Intelligence = 16;
-	Agility = 13;
+Race Serpentfolk() {
+	Race r;
+	r.RaceName = "Serpentfolk";
+	r.MaxHealth = 100;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 110;
+	r.Mana = r.MaxMana;
+	r.Strength = 9;
+	r.Intelligence = 16;
+	r.Agility = 13;
+	return r;
+}
+
+Race Race::SelectRace() {
+	int Choix;
+	std::cout << "Choisis ta race :\n";
+	std::cout << "1 - Elf\n2 - Dwarf\n3 - Human\n4 - Orc\n5 - Fairy\n";
+	std::cout << "6 - Undead\n7 - Draconian\n8 - WereWolf\n9 - HighElf\n10 - Serpentfolk\n";
+	std::cout << "Entrez le chiffre : ";
+	std::cin >> Choix;
+
+	// Retourne directement l'objet Race correspondant
+	if (Choix == 1) {
+		return Elf();
+	}
+	else if (Choix == 2 ) {
+		return Dwarf();
+	}
+	else if (Choix == 3 ) {
+		return Human();
+	}
+	else if (Choix == 4 ) {
+		return Orc();
+	}
+	else if (Choix == 5 ) {
+		return Fairy();
+	}
+	else if (Choix == 6 ) {
+		return Undead();
+	}
+	else if (Choix == 7 ) {
+		return Draconian();
+	}
+	else if (Choix == 8 ) {
+		return WereWolf();
+	}
+	else if (Choix == 9 ) {
+		return HighElf();
+	}
+	else if (Choix == 10) {
+		return Serpentfolk();
+	}
 }

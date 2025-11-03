@@ -1,4 +1,4 @@
 #pragma once
-struct random {
+struct Random {
 	int getRandomNumber(int min, int max);
 };

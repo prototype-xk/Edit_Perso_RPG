@@ -7,9 +7,9 @@ class Player
 {
 public:
 	Player();
-    Player(std::string _Pseudo);
 	Player(int _Size, int _Weight, std::string _Pseudo);
 	std::string Tostring();
+    void ChooseRace();
 protected:
     int Size;
     int Weight;

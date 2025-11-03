@@ -1,75 +1,19 @@
 #pragma once
-class Race // 10 Race
-{
-public:
-	Race();
-protected:
-	int MaxHealth;
-	int Health;
-	int MaxMana;
-	int Mana;
-	int Strength;
-	int Intelligence;
-	int Agility;
-};
+#include <string>
+#include <iostream>
 
-class Elf : public Race {
+class Race {
 public:
-	Elf();
-private:
+    std::string RaceName;
+    int MaxHealth;
+    int Health;
+    int MaxMana;
+    int Mana;
+    int Strength;
+    int Intelligence;
+    int Agility;
 
-};
-class Dwarf : public Race {
-public:
-	Dwarf();
-private:
+    Race(); // constructeur par défaut
 
-};
-class Human : public Race {
-public:
-	Human();
-private:
-
-};
-class Orc : public Race {
-public:
-	Orc();
-private:
-
-};
-class Draconian : public Race {
-public:
-	Draconian();
-private:
-
-};
-class Undead : public Race {
-public:
-	Undead();
-private:
-
-};
-class Fairy : public Race {
-public:
-	Fairy();
-private:
-
-};
-class WereWolf : public Race {
-public:
-	WereWolf();
-private:
-
-};
-class HighElf : public Race {
-public:
-	HighElf();
-private:
-
-};
-class Serpentfolk : public Race {
-public:
-	Serpentfolk();
-private:
-
+    Race SelectRace();
 };
