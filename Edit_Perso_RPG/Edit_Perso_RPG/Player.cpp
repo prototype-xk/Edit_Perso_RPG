@@ -18,6 +18,24 @@ Player::Player() {
     RaceName = "Nothing";   // Race Name
     ClassName = "Nothing";  // Class Name
 }
+Player::Player(std::string _Pseudo) {
+    Pseudo = _Pseudo;
+    Size = 0;
+    Weight = 0;
+
+    MaxHealth = 1;          // Max Life Point
+    Health = MaxHealth;     // Actual Life Point
+    MaxMana = 1;            // Max Magic Energy
+    Mana = MaxMana;         // Max Mana
+    Strength = 1;           // Physical Power
+    Intelligence = 1;       // Magical Power
+    Agility = 1;            // Speed and Dexterity
+
+    PourcentageCritique = 0;// Critical Chance in %
+
+    RaceName = "Nothing";   // Race Name
+    ClassName = "Nothing";  // Class Name
+}
 Player::Player(int _Size, int _Weight, std::string _Pseudo) {
 	std::string Pseudo = _Pseudo;
     Size = _Size;
