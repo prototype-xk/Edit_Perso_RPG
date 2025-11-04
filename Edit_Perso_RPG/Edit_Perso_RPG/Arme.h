@@ -4,7 +4,7 @@
 class Weapon
 {
 public:
-
+	virtual void Attack() = 0;
 protected:
 	std::string Name;	// Name of The Sword
 	int Damage;			// Number of Damage
@@ -14,20 +14,26 @@ protected:
 class Sword : public Weapon
 {
 public:
+	virtual void Attack() override;
 
 protected:
+	bool TwoHandle;
 };
 
 class Bow : public Weapon
 {
 public:
+	virtual void Attack() override;
 
 protected:
+	int Distance;
+	bool BowSize;
 };
 
 class Scepter : public Weapon
 {
 public:
+	virtual void Attack() override;
 
 protected:
 	int Mana;
@@ -36,6 +42,7 @@ protected:
 class Staff : public Weapon
 {
 public:
+	virtual void Attack() override;
 
 protected:
 	int Mana;
