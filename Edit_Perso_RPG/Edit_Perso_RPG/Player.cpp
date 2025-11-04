@@ -27,7 +27,7 @@ Player::Player(std::string _Pseudo) {
 void Player::Choose() {
     Random rd;
     int Dice=0;
-    int DiceHealth = 0, DiceMana = 0, DiceStrenght = 0, DiceIntelligence = 0, DiceAgility = 0;
+    int DiceHealth = 0, DiceMana = 0, DiceStrength = 0, DiceIntelligence = 0, DiceAgility = 0;
     int Tempo = 0, Select = 0;
     Race r;
     Race PlayerChoix = r.SelectRace();
@@ -38,37 +38,54 @@ void Player::Choose() {
     Dice = rd.getRandomNumber(1, 20);
     std::cout << "\nYou throw a dice of 20 the result : " << Dice;
     while (Dice > 0) {
-        std::cout << "\nPlease assign values to each stat | Point Number need to bed attribut " << Dice;
+        std::cout << "\nPlease assign values to each stat | Point Number need to add to the attribut " << Dice;
         std::cout << "\n1 - Life\n2 - Mana\n3 - Strength\n4 - Intelligence\n5 - Agility";
+        std::cout << "\nChoice : ";
         std::cin >> Select;
         if (Select == 1) {
             std::cout << "\nFor the life";
+            std::cout << "\nChoice : ";
             std::cin >> Tempo;
-            int DiceHealth = +Tempo;
-            Dice = Dice - Tempo;
+            if (Dice >= Tempo) {
+                DiceHealth += Tempo;
+                Dice = Dice - Tempo;
+            }
         }
         else if (Select == 2) {
             std::cout << "\nFor the Mana";
+            std::cout << "\nChoice : ";
             std::cin >> Tempo;
-            int DiceMana = +Tempo;
-            Dice = Dice -Tempo;
+            if (Dice >= Tempo){
+                DiceMana += Tempo;
+                Dice = Dice - Tempo;
+            }
         }
         else if (Select == 3) {
             std::cout << "\nFor the Strength";
+            std::cout << "\nChoice : ";
             std::cin >> Tempo;
-            int DiceStrength = +Tempo;
-            Dice = Dice - Tempo;
+            if (Dice >= Tempo) {
+                DiceStrength += Tempo;
+                Dice = Dice - Tempo;
+            }
         }
         else if (Select == 4) {
             std::cout << "\nFor the Intelligence";
+            std::cout << "\nChoice : ";
             std::cin >> Tempo;
-            int DiceIntelligence = +Tempo;
-            Dice = Dice - Tempo;
+            if (Dice >= Tempo) {
+                DiceIntelligence += Tempo;
+                Dice = Dice - Tempo;
+            }
         }
         else if (Select == 5) {
             std::cout << "\nFor the Agility";
-            int DiceAgility = +Tempo;
-            Dice =- Tempo;
+            std::cout << "\nChoice : ";
+            std::cin >> Tempo;
+            if (Dice >= Tempo) {
+                DiceAgility += Tempo;
+                Dice = Dice - Tempo;
+            }
         }
     }
     ClassName = PlayerChoixC.ClassName;
@@ -77,7 +94,7 @@ void Player::Choose() {
     Health = PlayerChoix.Health + PlayerChoixC.HealthBonus + DiceHealth;
     MaxMana = PlayerChoix.MaxMana + PlayerChoixC.ManaBonus + DiceMana;
     Mana = PlayerChoix.Mana + PlayerChoixC.ManaBonus + DiceMana;
-    Strength = PlayerChoix.Strength + PlayerChoixC.StrengthBonus + DiceStrenght;
+    Strength = PlayerChoix.Strength + PlayerChoixC.StrengthBonus + DiceStrength;
     Intelligence = PlayerChoix.Intelligence + PlayerChoixC.IntelligenceBonus + DiceIntelligence;
     Agility = PlayerChoix.Agility + PlayerChoixC.AgilityBonus + DiceAgility;
     PourcentageCritique = 1;
