@@ -152,11 +152,11 @@ Class Alchemist() {
 
 Class Class::SelectClass() {
     int Choix;
-    std::cout << "Choisis ta race :\n";
+    std::cout << "Select a Class (No Choice going to put Rogue):\n";
     std::cout << "1 - Warrior\n2 - Mage\n3 - Rogue\n4 - Cleric\n5 - Paladin\n";
     std::cout << "6 - Ranger\n7 - Bard\n8 - Necromancer\n9 - Monk\n10 - Sorcerer\n";
     std::cout << "11 - Druid\n12 - Barbarian\n13 - Assassin\n14 - Alchemist\n";
-    std::cout << "Entrez le chiffre : ";
+    std::cout << "Enter Number : ";
     std::cin >> Choix;
 
     // Retourne directement l'objet Race correspondant

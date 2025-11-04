@@ -173,10 +173,10 @@ Race Serpentfolk() {
 
 Race Race::SelectRace() {
 	int Choix;
-	std::cout << "Choisis ta race :\n";
+	std::cout << "Select Race (No Choice going to put Human) :\n";
 	std::cout << "1 - Elf\n2 - Dwarf\n3 - Human\n4 - Orc\n5 - Fairy\n";
 	std::cout << "6 - Undead\n7 - Draconian\n8 - WereWolf\n9 - HighElf\n10 - Serpentfolk\n";
-	std::cout << "Entrez le chiffre : ";
+	std::cout << "Enter a Number : ";
 	std::cin >> Choix;
 
 	// Retourne directement l'objet Race correspondant
