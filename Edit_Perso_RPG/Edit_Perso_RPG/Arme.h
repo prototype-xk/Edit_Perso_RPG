@@ -47,3 +47,12 @@ public:
 protected:
 	int Mana;
 };
+
+class Wand : public Weapon
+{
+public:
+	virtual void Attack() override;
+
+protected:
+	int Mana;
+};
