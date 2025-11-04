@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Class.h"
 #include "Race.h"
+#include "Random.h"
 
 class Player
 {

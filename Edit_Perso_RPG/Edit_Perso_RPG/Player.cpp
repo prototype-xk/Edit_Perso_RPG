@@ -25,22 +25,61 @@ Player::Player(std::string _Pseudo) {
 }
 
 void Player::Choose() {
+    Random rd;
+    int Dice=0;
+    int DiceHealth = 0, DiceMana = 0, DiceStrenght = 0, DiceIntelligence = 0, DiceAgility = 0;
+    int Tempo = 0, Select = 0;
     Race r;
     Race PlayerChoix = r.SelectRace();
-    std::cout << "\nVous Avez Choisi : " << PlayerChoix.RaceName << "\n\n";
+    std::cout << "\nYou Select : " << PlayerChoix.RaceName << "\n\n";
     Class c;
     Class PlayerChoixC = c.SelectClass();
-    std::cout << "\nVous Avez Choisi : " << PlayerChoixC.ClassName << "\n";
-
+    std::cout << "\nYou Select : " << PlayerChoixC.ClassName << "\n";
+    Dice = rd.getRandomNumber(1, 20);
+    std::cout << "\nYou throw a dice of 20 the result : " << Dice;
+    while (Dice > 0) {
+        std::cout << "\nPlease assign values to each stat | Point Number need to bed attribut " << Dice;
+        std::cout << "\n1 - Life\n2 - Mana\n3 - Strength\n4 - Intelligence\n5 - Agility";
+        std::cin >> Select;
+        if (Select == 1) {
+            std::cout << "\nFor the life";
+            std::cin >> Tempo;
+            int DiceHealth = +Tempo;
+            Dice = Dice - Tempo;
+        }
+        else if (Select == 2) {
+            std::cout << "\nFor the Mana";
+            std::cin >> Tempo;
+            int DiceMana = +Tempo;
+            Dice = Dice -Tempo;
+        }
+        else if (Select == 3) {
+            std::cout << "\nFor the Strength";
+            std::cin >> Tempo;
+            int DiceStrength = +Tempo;
+            Dice = Dice - Tempo;
+        }
+        else if (Select == 4) {
+            std::cout << "\nFor the Intelligence";
+            std::cin >> Tempo;
+            int DiceIntelligence = +Tempo;
+            Dice = Dice - Tempo;
+        }
+        else if (Select == 5) {
+            std::cout << "\nFor the Agility";
+            int DiceAgility = +Tempo;
+            Dice =- Tempo;
+        }
+    }
     ClassName = PlayerChoixC.ClassName;
     RaceName = PlayerChoix.RaceName;
-    MaxHealth = PlayerChoix.MaxHealth + PlayerChoixC.HealthBonus;
-    Health = PlayerChoix.Health + PlayerChoixC.HealthBonus;
-    MaxMana = PlayerChoix.MaxMana + PlayerChoixC.ManaBonus;
-    Mana = PlayerChoix.Mana + PlayerChoixC.ManaBonus;
-    Strength = PlayerChoix.Strength + PlayerChoixC.StrengthBonus;
-    Intelligence = PlayerChoix.Intelligence + PlayerChoixC.IntelligenceBonus;
-    Agility = PlayerChoix.Agility + PlayerChoixC.AgilityBonus;
+    MaxHealth = PlayerChoix.MaxHealth + PlayerChoixC.HealthBonus + DiceHealth;
+    Health = PlayerChoix.Health + PlayerChoixC.HealthBonus + DiceHealth;
+    MaxMana = PlayerChoix.MaxMana + PlayerChoixC.ManaBonus + DiceMana;
+    Mana = PlayerChoix.Mana + PlayerChoixC.ManaBonus + DiceMana;
+    Strength = PlayerChoix.Strength + PlayerChoixC.StrengthBonus + DiceStrenght;
+    Intelligence = PlayerChoix.Intelligence + PlayerChoixC.IntelligenceBonus + DiceIntelligence;
+    Agility = PlayerChoix.Agility + PlayerChoixC.AgilityBonus + DiceAgility;
     PourcentageCritique = 1;
     SizeMax = PlayerChoix.SizeMax;
     SizeMin = PlayerChoix.SizeMin;
@@ -53,13 +92,13 @@ std::string Player::Tostring(int Size, int Weight) {
 	std::string PlayerAsString = "=== " + Pseudo + " ===\n" +
         "Race : " + RaceName + "\n" +
         "Classe : " + ClassName + "\n" +
-        "Taille : " + std::to_string(Size) + "\n" +
-        "Poids : " + std::to_string(Weight) + "\n" +
+        "Size : " + std::to_string(Size) + "\n" +
+        "Weight : " + std::to_string(Weight) + "\n" +
         "PV : " + std::to_string(Health) + "/" + std::to_string(MaxHealth) + "\n" +
         "Mana : " + std::to_string(Mana) + "/" + std::to_string(MaxMana) + "\n" +
-        "Force : " + std::to_string(Strength) + "\n" +
+        "Strength : " + std::to_string(Strength) + "\n" +
         "Intelligence : " + std::to_string(Intelligence) + "\n" +
-        "Agilit : " + std::to_string(Agility) + "\n" +
-        "Crit : " + std::to_string(PourcentageCritique) + "%\n";
+        "Agility : " + std::to_string(Agility) + "\n" +
+        "Critical Chance : " + std::to_string(PourcentageCritique) + "%\n";
 	return PlayerAsString;
 }

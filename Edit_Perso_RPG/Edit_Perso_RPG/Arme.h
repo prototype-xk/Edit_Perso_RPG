@@ -1,10 +1,12 @@
 #pragma once
-class Arme
+#include <string>
+#include "Random.h"
+class Sword
 {
 public:
 
-private:
-	int Damage;
-	int Type;
-	int LevelRequirement;
+protected:
+	std::string Name;	// Name of The Sword
+	int Damage;			// Number of Damage
+	int Type;			// Type of Damage ( Magic / Phyiscal / etc..* )
 };
