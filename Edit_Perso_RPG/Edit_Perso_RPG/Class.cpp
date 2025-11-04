@@ -1,5 +1,6 @@
 #include "Class.h"
-Class::Class() {
+Class::Class() { // 14 Class
+    ClassName = "Nothing";
     HealthBonus = 0;        // Bonus Life Point
     ManaBonus = 0;          // Bonus Magic Energy
     StrengthBonus = 0;      // Bonus Physical Power
@@ -7,101 +8,201 @@ Class::Class() {
     AgilityBonus = 0;       // Bonus Speed and Dexterity
 }
 
-Warrior::Warrior() {
-    HealthBonus = 20;
-    ManaBonus = 0;
-    StrengthBonus = 3;
-    IntelligenceBonus = 0;
-    AgilityBonus = 1;
+
+Class Warrior() {
+    Class c;
+    c.ClassName = "Warrior";
+    c.HealthBonus = 20;
+    c.ManaBonus = 0;
+    c.StrengthBonus = 3;
+    c.IntelligenceBonus = 0;
+    c.AgilityBonus = 1;
+    return c;
 }
-Mage::Mage() {
-    HealthBonus = 0;
-    ManaBonus = 40;
-    StrengthBonus = 0;
-    IntelligenceBonus = 4;
-    AgilityBonus = 0;
+Class Mage() {
+    Class c;
+    c.ClassName = "Mage";
+    c.HealthBonus = 0;
+    c.ManaBonus = 40;
+    c.StrengthBonus = 0;
+    c.IntelligenceBonus = 4;
+    c.AgilityBonus = 0;
+    return c;
 }
-Rogue::Rogue() {
-    HealthBonus = 0;
-    ManaBonus = 0;
-    StrengthBonus = 1;
-    IntelligenceBonus = 0;
-    AgilityBonus = 4;
+Class Rogue() {
+    Class c;
+    c.ClassName = "Rogue";
+    c.HealthBonus = 0;
+    c.ManaBonus = 0;
+    c.StrengthBonus = 1;
+    c.IntelligenceBonus = 0;
+    c.AgilityBonus = 4;
+    return c;
 }
-Cleric::Cleric() {
-    HealthBonus = 10;
-    ManaBonus = 30;
-    StrengthBonus = 0;
-    IntelligenceBonus = 3;
-    AgilityBonus = 0;
+Class Cleric() {
+    Class c;
+    c.ClassName = "Cleric";
+    c.HealthBonus = 10;
+    c.ManaBonus = 30;
+    c.StrengthBonus = 0;
+    c.IntelligenceBonus = 3;
+    c.AgilityBonus = 0;
+    return c;
 }
-Paladin::Paladin() {
-    HealthBonus = 25;
-    ManaBonus = 10;
-    StrengthBonus = 2;
-    IntelligenceBonus = 1;
-    AgilityBonus = 0;
+Class Paladin() {
+    Class c;
+    c.ClassName = "Paladin";
+    c.HealthBonus = 25;
+    c.ManaBonus = 10;
+    c.StrengthBonus = 2;
+    c.IntelligenceBonus = 1;
+    c.AgilityBonus = 0;
+    return c;
 }
-Ranger::Ranger() {
-    HealthBonus = 0;
-    ManaBonus = 10;
-    StrengthBonus = 1;
-    IntelligenceBonus = 0;
-    AgilityBonus = 3;
+Class Ranger() {
+    Class c;
+    c.ClassName = "Ranger";
+    c.HealthBonus = 0;
+    c.ManaBonus = 10;
+    c.StrengthBonus = 1;
+    c.IntelligenceBonus = 0;
+    c.AgilityBonus = 3;
+    return c;
 }
-Bard::Bard() {
-    HealthBonus = 0;
-    ManaBonus = 20;
-    StrengthBonus = 0;
-    IntelligenceBonus = 2;
-    AgilityBonus = 2;
+Class Bard() {
+    Class c;
+    c.ClassName = "Bard";
+    c.HealthBonus = 0;
+    c.ManaBonus = 20;
+    c.StrengthBonus = 0;
+    c.IntelligenceBonus = 2;
+    c.AgilityBonus = 2;
+    return c;
 }
-Necromancer::Necromancer() {
-    HealthBonus = 0;
-    ManaBonus = 30;
-    StrengthBonus = 0;
-    IntelligenceBonus = 4;
-    AgilityBonus = 0;
+Class Necromancer() {
+    Class c;
+    c.ClassName = "Necromancer";
+    c.HealthBonus = 0;
+    c.ManaBonus = 30;
+    c.StrengthBonus = 0;
+    c.IntelligenceBonus = 4;
+    c.AgilityBonus = 0;
+    return c;
 }
-Monk::Monk() {
-    HealthBonus = 10;
-    ManaBonus = 10;
-    StrengthBonus = 2;
-    IntelligenceBonus = 2;
-    AgilityBonus = 2;
+Class Monk() {
+    Class c;
+    c.ClassName = "Monk";
+    c.HealthBonus = 10;
+    c.ManaBonus = 10;
+    c.StrengthBonus = 2;
+    c.IntelligenceBonus = 2;
+    c.AgilityBonus = 2;
+    return c;
 }
-Sorcerer::Sorcerer() {
-    HealthBonus = 0;
-    ManaBonus = 50;
-    StrengthBonus = 0;
-    IntelligenceBonus = 5;
-    AgilityBonus = 0;
+Class Sorcerer() {
+    Class c;
+    c.ClassName = "Sorcerer";
+    c.HealthBonus = 0;
+    c.ManaBonus = 50;
+    c.StrengthBonus = 0;
+    c.IntelligenceBonus = 5;
+    c.AgilityBonus = 0;
+    return c;
 }
-Druid::Druid() {
-    HealthBonus = 10;
-    ManaBonus = 30;
-    StrengthBonus = 1;
-    IntelligenceBonus = 3;
-    AgilityBonus = 0;
+Class Druid() {
+    Class c;
+    c.ClassName = "Druid";
+    c.HealthBonus = 10;
+    c.ManaBonus = 30;
+    c.StrengthBonus = 1;
+    c.IntelligenceBonus = 3;
+    c.AgilityBonus = 0;
+    return c;
 }
-Barbarian::Barbarian() {
-    HealthBonus = 40;
-    ManaBonus = 0;
-    StrengthBonus = 5;
-    IntelligenceBonus = 0;
-    AgilityBonus = 1;
+Class Barbarian() {
+    Class c;
+    c.ClassName = "Barbarian";
+    c.HealthBonus = 40;
+    c.ManaBonus = 0;
+    c.StrengthBonus = 5;
+    c.IntelligenceBonus = 0;
+    c.AgilityBonus = 1;
+    return c;
 }
-Assassin::Assassin() {
-    HealthBonus = 0;
-    ManaBonus = 0;
-    StrengthBonus = 2;
-    IntelligenceBonus = 0;
-    AgilityBonus = 5;
+Class Assassin() {
+    Class c;
+    c.ClassName = "Assasin";
+    c.HealthBonus = 0;
+    c.ManaBonus = 0;
+    c.StrengthBonus = 2;
+    c.IntelligenceBonus = 0;
+    c.AgilityBonus = 5;
+    return c;
 }
-Alchemist::Alchemist() {
-    HealthBonus = 0;
-    ManaBonus = 25;
-    StrengthBonus = 0;
-    IntelligenceBonus = 4;
-    AgilityBonus = 1;
+Class Alchemist() {
+    Class c;
+    c.ClassName = "Alchemist";
+    c.HealthBonus = 0;
+    c.ManaBonus = 25;
+    c.StrengthBonus = 0;
+    c.IntelligenceBonus = 4;
+    c.AgilityBonus = 1;
+    return c;
+}
+
+Class Class::SelectClass() {
+    int Choix;
+    std::cout << "Choisis ta race :\n";
+    std::cout << "1 - Warrior\n2 - Mage\n3 - Rogue\n4 - Cleric\n5 - Paladin\n";
+    std::cout << "6 - Ranger\n7 - Bard\n8 - Necromancer\n9 - Monk\n10 - Sorcerer\n";
+    std::cout << "11 - Druid\n12 - Barbarian\n13 - Assassin\n14 - Alchemist\n";
+    std::cout << "Entrez le chiffre : ";
+    std::cin >> Choix;
+
+    // Retourne directement l'objet Race correspondant
+    if (Choix == 1) {
+        return Warrior();
+    }
+    else if (Choix == 2) {
+        return Mage();
+    }
+    else if (Choix == 3) {
+        return Rogue();
+    }
+    else if (Choix == 4) {
+        return Cleric();
+    }
+    else if (Choix == 5) {
+        return Paladin();
+    }
+    else if (Choix == 6) {
+        return Ranger();
+    }
+    else if (Choix == 7) {
+        return Bard();
+    }
+    else if (Choix == 8) {
+        return Necromancer();
+    }
+    else if (Choix == 9) {
+        return Monk();
+    }
+    else if (Choix == 10) {
+        return Sorcerer();
+    }
+    else if (Choix == 11) {
+        return Druid();
+    }
+    else if (Choix == 12) {
+        return Barbarian();
+    }
+    else if (Choix == 13) {
+        return Assassin();
+    }
+    else if (Choix == 14) {
+        return Alchemist();
+    }
+    else {
+        return Rogue();
+    }
 }

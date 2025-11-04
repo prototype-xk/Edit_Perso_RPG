@@ -1,5 +1,5 @@
 #include "Race.h"
-Race::Race() {
+Race::Race() { // 10 Races
 	RaceName = "Nothing";
 	MaxHealth = 100;	// Maximum Life Point
 	Health = 100;		// Actual Life Point
@@ -20,6 +20,10 @@ Race Elf() {
 	r.Strength = 8;
 	r.Intelligence = 17;
 	r.Agility = 14;
+	r.WeightMax = 75;
+	r.WeightMin = 55;
+	r.SizeMax = 190;
+	r.SizeMin = 170;
 	return r;
 }
 Race Dwarf() {
@@ -32,18 +36,26 @@ Race Dwarf() {
 	r.Strength = 16;
 	r.Intelligence = 8;
 	r.Agility = 7;
+	r.WeightMax = 90;
+	r.WeightMin = 60;
+	r.SizeMax = 140;
+	r.SizeMin = 120;
 	return r;
 }
 Race Human() {
 	Race r;
 	r.RaceName = "Human";
-	r.MaxHealth = 110;
+	r.MaxHealth = 100;
 	r.Health = r.MaxHealth;
 	r.MaxMana = 70;
 	r.Mana = r.MaxMana;
 	r.Strength = 10;
 	r.Intelligence = 10;
 	r.Agility = 10;
+	r.WeightMax = 100;
+	r.WeightMin = 55;
+	r.SizeMax = 190;
+	r.SizeMin = 160;
 	return r;
 }
 Race Orc() {
@@ -56,6 +68,10 @@ Race Orc() {
 	r.Strength = 19;
 	r.Intelligence = 7;
 	r.Agility = 9;
+	r.WeightMax = 150;
+	r.WeightMin = 90;
+	r.SizeMax = 220;
+	r.SizeMin = 180;
 	return r;
 }
 Race Fairy() {
@@ -68,18 +84,26 @@ Race Fairy() {
 	r.Strength = 5;
 	r.Intelligence = 19;
 	r.Agility = 18;
+	r.WeightMax = 5;
+	r.WeightMin = 1;
+	r.SizeMax = 50;
+	r.SizeMin = 30;
 	return r;
 }
 Race Undead() {
 	Race r;
 	r.RaceName = "Undead";
-	r.MaxHealth = 100;
+	r.MaxHealth = 90;
 	r.Health = r.MaxHealth;
 	r.MaxMana = 80;
 	r.Mana = r.MaxMana;
 	r.Strength = 12;
 	r.Intelligence = 12;
 	r.Agility = 10;
+	r.WeightMax = 90;
+	r.WeightMin = 40;
+	r.SizeMax = 200;
+	r.SizeMin = 150;
 	return r;
 }
 Race Draconian() {
@@ -92,6 +116,10 @@ Race Draconian() {
 	r.Strength = 20;
 	r.Intelligence = 14;
 	r.Agility = 10;
+	r.WeightMax = 200;
+	r.WeightMin = 120;
+	r.SizeMax = 250;
+	r.SizeMin = 200;
 	return r;
 }
 Race WereWolf() {
@@ -104,6 +132,10 @@ Race WereWolf() {
 	r.Strength = 17;
 	r.Intelligence = 9;
 	r.Agility = 15;
+	r.WeightMax = 130;
+	r.WeightMin = 80;
+	r.SizeMax = 220;
+	r.SizeMin = 180;
 	return r;
 }
 Race HighElf() {
@@ -116,6 +148,10 @@ Race HighElf() {
 	r.Strength = 8;
 	r.Intelligence = 21;
 	r.Agility = 13;
+	r.WeightMax = 80;
+	r.WeightMin = 60;
+	r.SizeMax = 195;
+	r.SizeMin = 175;
 	return r;
 }
 Race Serpentfolk() {
@@ -128,6 +164,10 @@ Race Serpentfolk() {
 	r.Strength = 9;
 	r.Intelligence = 16;
 	r.Agility = 13;
+	r.WeightMax = 100;
+	r.WeightMin = 50;
+	r.SizeMax = 210;
+	r.SizeMin = 160;
 	return r;
 }
 
@@ -169,5 +209,8 @@ Race Race::SelectRace() {
 	}
 	else if (Choix == 10) {
 		return Serpentfolk();
+	}
+	else {
+		return Human();
 	}
 }

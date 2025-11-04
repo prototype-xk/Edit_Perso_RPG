@@ -1,9 +1,11 @@
 #include "Player.h"
 
 Player::Player() {
-    Pseudo = "User-1";
-    Size = 0;
-    Weight = 0;
+    Pseudo = "User-1";      // Pseudo of Player
+    SizeMax = 100;          // Size of Player Maximal
+    SizeMin = 0;            // Size of Player Minimal
+    WeightMax = 0;             // Weight of Player Maximal
+    WeightMin = 0;          // Weight of Player Minimal
 
     MaxHealth = 1;          // Max Life Point
     Health = MaxHealth;     // Actual Life Point
@@ -18,27 +20,36 @@ Player::Player() {
     RaceName = "Nothing";   // Race Name
     ClassName = "Nothing";  // Class Name
 }
-Player::Player(int _Size, int _Weight, std::string _Pseudo) {
-	std::string Pseudo = _Pseudo;
-    Size = _Size;
-    Weight = _Weight;
+Player::Player(std::string _Pseudo) {
+    Pseudo = _Pseudo;
 }
-void Player::ChooseRace() {
+
+void Player::Choose() {
     Race r;
     Race PlayerChoix = r.SelectRace();
+    std::cout << "\nVous Avez Choisi : " << PlayerChoix.RaceName << "\n\n";
+    Class c;
+    Class PlayerChoixC = c.SelectClass();
+    std::cout << "\nVous Avez Choisi : " << PlayerChoixC.ClassName << "\n";
 
+    ClassName = PlayerChoixC.ClassName;
     RaceName = PlayerChoix.RaceName;
-    MaxHealth = PlayerChoix.MaxHealth;
-    Health = PlayerChoix.Health;
-    MaxMana = PlayerChoix.MaxMana;
-    Mana = PlayerChoix.Mana;
-    Strength = PlayerChoix.Strength;
-    Intelligence = PlayerChoix.Intelligence;
-    Agility = PlayerChoix.Agility;
+    MaxHealth = PlayerChoix.MaxHealth + PlayerChoixC.HealthBonus;
+    Health = PlayerChoix.Health + PlayerChoixC.HealthBonus;
+    MaxMana = PlayerChoix.MaxMana + PlayerChoixC.ManaBonus;
+    Mana = PlayerChoix.Mana + PlayerChoixC.ManaBonus;
+    Strength = PlayerChoix.Strength + PlayerChoixC.StrengthBonus;
+    Intelligence = PlayerChoix.Intelligence + PlayerChoixC.IntelligenceBonus;
+    Agility = PlayerChoix.Agility + PlayerChoixC.AgilityBonus;
+    PourcentageCritique = 1;
+    SizeMax = PlayerChoix.SizeMax;
+    SizeMin = PlayerChoix.SizeMin;
+    WeightMax = PlayerChoix.WeightMax;
+    WeightMin = PlayerChoix.WeightMin;
 
-    std::cout << "Vous avez choisi : " << RaceName << "\n";
 }
-std::string Player::Tostring() {
+
+std::string Player::Tostring(int Size, int Weight) {
 	std::string PlayerAsString = "=== " + Pseudo + " ===\n" +
         "Race : " + RaceName + "\n" +
         "Classe : " + ClassName + "\n" +

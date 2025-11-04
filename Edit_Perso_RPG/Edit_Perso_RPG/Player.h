@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 #include "Class.h"
 #include "Race.h"
 
@@ -7,12 +8,14 @@ class Player
 {
 public:
 	Player();
-	Player(int _Size, int _Weight, std::string _Pseudo);
-	std::string Tostring();
-    void ChooseRace();
+    Player(std::string _Pseudo);
+	std::string Tostring(int Size, int Weight);
+    void Choose();
+    int SizeMax;
+    int SizeMin;
+    int WeightMax;
+    int WeightMin;
 protected:
-    int Size;
-    int Weight;
     std::string Pseudo;
 
     int MaxHealth;

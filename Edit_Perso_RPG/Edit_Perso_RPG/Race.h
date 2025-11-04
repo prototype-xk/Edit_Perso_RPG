@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 
-class Race {
+class Race { // 10 Races
 public:
     std::string RaceName;
     int MaxHealth;
@@ -12,8 +12,12 @@ public:
     int Strength;
     int Intelligence;
     int Agility;
+    int WeightMax;
+    int WeightMin;
+    int SizeMax;
+    int SizeMin;
 
-    Race(); // constructeur par défaut
+    Race();
 
     Race SelectRace();
 };

@@ -1,3 +1,2 @@
 ﻿  Race.cpp
-C:\Users\ebaloche\Documents\GitHub\Edit_Perso_RPG\Edit_Perso_RPG\Edit_Perso_RPG\Race.cpp(173): warning C4715: 'Race::SelectRace' : les chemins de contrôle ne retournent pas tous une valeur
   Edit_Perso_RPG.vcxproj -> C:\Users\ebaloche\Documents\GitHub\Edit_Perso_RPG\Edit_Perso_RPG\x64\Debug\Edit_Perso_RPG.exe
