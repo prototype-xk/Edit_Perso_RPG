@@ -170,12 +170,29 @@ Race Serpentfolk() {
 	r.SizeMin = 160;
 	return r;
 }
+Race Error() {
+	Race r;
+	r.RaceName = "Error";
+	r.MaxHealth = 1000000;
+	r.Health = r.MaxHealth;
+	r.MaxMana = 1000000;
+	r.Mana = r.MaxMana;
+	r.Strength = 100;
+	r.Intelligence = 1000000;
+	r.Agility = 1000000;
+	r.WeightMax = 1000000;
+	r.WeightMin = 0;
+	r.SizeMax = 1000000;
+	r.SizeMin = 0;
+	return r;
+}
 
 Race Race::SelectRace() {
 	int Choix;
 	std::cout << "Select Race (No Choice going to put Human) :\n";
 	std::cout << "1 - Elf\n2 - Dwarf\n3 - Human\n4 - Orc\n5 - Fairy\n";
 	std::cout << "6 - Undead\n7 - Draconian\n8 - WereWolf\n9 - HighElf\n10 - Serpentfolk\n";
+	std::cout << "11 - Classe Test\n";
 	std::cout << "Enter a Number : ";
 	std::cin >> Choix;
 
@@ -209,6 +226,9 @@ Race Race::SelectRace() {
 	}
 	else if (Choix == 10) {
 		return Serpentfolk();
+	}
+	else if (Choix == 11) {
+		return Error();
 	}
 	else {
 		return Human();

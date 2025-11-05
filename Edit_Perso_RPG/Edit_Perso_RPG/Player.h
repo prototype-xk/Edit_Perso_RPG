@@ -4,18 +4,20 @@
 #include "Class.h"
 #include "Race.h"
 #include "Random.h"
+#include "Arme.h"
 
 class Player
 {
 public:
-	Player();
+    Player();
     Player(std::string _Pseudo);
-	std::string Tostring(int Size, int Weight);
+    std::string Tostring(int Size, int Weight);
     void Choose();
     int SizeMax;
     int SizeMin;
     int WeightMax;
     int WeightMin;
+
 protected:
     std::string Pseudo;
 

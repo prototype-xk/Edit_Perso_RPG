@@ -102,7 +102,6 @@ void Player::Choose() {
     SizeMin = PlayerChoix.SizeMin;
     WeightMax = PlayerChoix.WeightMax;
     WeightMin = PlayerChoix.WeightMin;
-
 }
 
 std::string Player::Tostring(int Size, int Weight) {

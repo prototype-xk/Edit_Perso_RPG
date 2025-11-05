@@ -149,6 +149,16 @@ Class Alchemist() {
     c.AgilityBonus = 1;
     return c;
 }
+Class Uncensored() {
+    Class c;
+    c.ClassName = "Uncensored";
+    c.HealthBonus = -5000;
+    c.ManaBonus = -5000;
+    c.StrengthBonus = -10;
+    c.IntelligenceBonus = -60;
+    c.AgilityBonus = -50;
+    return c;
+}
 
 Class Class::SelectClass() {
     int Choix;
@@ -156,6 +166,7 @@ Class Class::SelectClass() {
     std::cout << "1 - Warrior\n2 - Mage\n3 - Rogue\n4 - Cleric\n5 - Paladin\n";
     std::cout << "6 - Ranger\n7 - Bard\n8 - Necromancer\n9 - Monk\n10 - Sorcerer\n";
     std::cout << "11 - Druid\n12 - Barbarian\n13 - Assassin\n14 - Alchemist\n";
+    std::cout << "15 - Uncensored\n";
     std::cout << "Enter Number : ";
     std::cin >> Choix;
 
@@ -201,6 +212,9 @@ Class Class::SelectClass() {
     }
     else if (Choix == 14) {
         return Alchemist();
+    }
+    else if (Choix == 15) {
+        return Uncensored();
     }
     else {
         return Rogue();
