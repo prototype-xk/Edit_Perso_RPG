@@ -1,189 +1,124 @@
 #include "Race.h"
 Race::Race() { // 10 Races
 	RaceName = "Nothing";
-	MaxHealth = 100;	// Maximum Life Point
-	Health = 100;		// Actual Life Point
-	MaxMana = 100;		// Maximum Magic Energy
-	Mana = 100;			// Actual Magic Energy
-	Strength = 1;		// Physical Power
-	Intelligence = 10;	// Magical Power
-	Agility = 10;		// Speed and dexterity
+	MaxHealth = 100;
+	Health = 100;
+	MaxMana = 100;
+	Mana = 10;
+	Strength = 10;
+	Intelligence = 10;
+	Agility = 10;
+	WeightMax = 100;
+	WeightMin = 0;
+	SizeMax = 100;
+	SizeMin = 0;
+}
+
+std::string Race::GetRaceName() {
+	return RaceName;
+}
+int Race::GetMaxHealth() {
+	return MaxHealth;
+}
+int Race::GetHealth() {
+	return Health;
+}
+int Race::GetMaxMana() {
+	return MaxMana;
+}
+int Race::GetMana() {
+	return Mana;
+}
+int Race::GetStrength() {
+	return Strength;
+}
+int Race::GetIntelligence() {
+	return Intelligence;
+}
+int Race::GetAgility() {
+	return Agility;
+}
+int Race::GetWeightMin() {
+	return WeightMin;
+}
+int Race::GetWeightMax() {
+	return WeightMax;
+}
+int Race::GetSizeMin() {
+	return SizeMin;
+}
+int Race::GetSizeMax() {
+	return SizeMax;
+}
+
+void Race::SetStats(std::string _RaceName, int _MaxHealth, int _MaxMana, int _Strength, int _Intelligence, int _Agility, int _WeightMax, int _WeightMin, int _SizeMax, int _SizeMin) {
+	RaceName = _RaceName;
+	MaxHealth = _MaxHealth;
+	Health = _MaxHealth;
+	MaxMana = _MaxMana;
+	Mana = _MaxMana;
+	Strength = _Strength;
+	Intelligence = _Intelligence;
+	Agility = _Agility;
+	WeightMax = _WeightMax;
+	WeightMin = _WeightMin;
+	SizeMax = _SizeMax;
+	SizeMin = _SizeMin;
 }
 
 Race Elf() {
 	Race r;
-	r.RaceName = "Elf";
-	r.MaxHealth = 90;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 120;
-	r.Mana = r.MaxMana;
-	r.Strength = 8;
-	r.Intelligence = 17;
-	r.Agility = 14;
-	r.WeightMax = 75;
-	r.WeightMin = 55;
-	r.SizeMax = 190;
-	r.SizeMin = 170;
+	r.SetStats("Elf", 90, 120, 8, 17, 14, 75, 55, 190, 170);
 	return r;
 }
 Race Dwarf() {
 	Race r;
-	r.RaceName = "Dwarf";
-	r.MaxHealth = 140;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 50;
-	r.Mana = r.MaxMana;
-	r.Strength = 16;
-	r.Intelligence = 8;
-	r.Agility = 7;
-	r.WeightMax = 90;
-	r.WeightMin = 60;
-	r.SizeMax = 140;
-	r.SizeMin = 120;
+	r.SetStats("Dward", 140, 50, 16, 8, 7, 90, 60, 140, 120);
 	return r;
 }
 Race Human() {
 	Race r;
-	r.RaceName = "Human";
-	r.MaxHealth = 100;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 70;
-	r.Mana = r.MaxMana;
-	r.Strength = 10;
-	r.Intelligence = 10;
-	r.Agility = 10;
-	r.WeightMax = 100;
-	r.WeightMin = 55;
-	r.SizeMax = 190;
-	r.SizeMin = 160;
+	r.SetStats("Human", 100, 70, 10, 10, 10, 100, 55, 190, 160);
 	return r;
 }
 Race Orc() {
 	Race r;
-	r.RaceName = "Orc";
-	r.MaxHealth = 150;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 40;
-	r.Mana = r.MaxMana;
-	r.Strength = 19;
-	r.Intelligence = 7;
-	r.Agility = 9;
-	r.WeightMax = 150;
-	r.WeightMin = 90;
-	r.SizeMax = 220;
-	r.SizeMin = 180;
+	r.SetStats("Orc", 150, 40, 19, 7, 9, 150, 90, 220, 180);
 	return r;
 }
 Race Fairy() {
 	Race r;
-	r.RaceName = "Fairy";
-	r.MaxHealth = 70;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 160;
-	r.Mana = r.MaxMana;
-	r.Strength = 5;
-	r.Intelligence = 19;
-	r.Agility = 18;
-	r.WeightMax = 5;
-	r.WeightMin = 1;
-	r.SizeMax = 50;
-	r.SizeMin = 30;
+	r.SetStats("Fairy", 70, 160, 5, 19, 18, 5, 1, 50, 30);
 	return r;
 }
 Race Undead() {
 	Race r;
-	r.RaceName = "Undead";
-	r.MaxHealth = 90;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 80;
-	r.Mana = r.MaxMana;
-	r.Strength = 12;
-	r.Intelligence = 12;
-	r.Agility = 10;
-	r.WeightMax = 90;
-	r.WeightMin = 40;
-	r.SizeMax = 200;
-	r.SizeMin = 150;
+	r.SetStats("Undead", 90, 80, 12, 12, 10, 90, 40, 200, 150);
 	return r;
 }
 Race Draconian() {
 	Race r;
-	r.RaceName = "Draconian";
-	r.MaxHealth = 160;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 90;
-	r.Mana = r.MaxMana;
-	r.Strength = 20;
-	r.Intelligence = 14;
-	r.Agility = 10;
-	r.WeightMax = 200;
-	r.WeightMin = 120;
-	r.SizeMax = 250;
-	r.SizeMin = 200;
+	r.SetStats("Draconian", 160, 90, 20, 14, 10, 200, 120, 250, 200);
 	return r;
 }
 Race WereWolf() {
 	Race r;
-	r.RaceName = "WereWolf";
-	r.MaxHealth = 130;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 50;
-	r.Mana = r.MaxMana;
-	r.Strength = 17;
-	r.Intelligence = 9;
-	r.Agility = 15;
-	r.WeightMax = 130;
-	r.WeightMin = 80;
-	r.SizeMax = 220;
-	r.SizeMin = 180;
+	r.SetStats("WereWolf", 130, 50, 17, 9, 15, 130, 80, 220, 180);
 	return r;
 }
 Race HighElf() {
 	Race r;
-	r.RaceName = "HighElf";
-	r.MaxHealth = 100;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 150;
-	r.Mana = r.MaxMana;
-	r.Strength = 8;
-	r.Intelligence = 21;
-	r.Agility = 13;
-	r.WeightMax = 80;
-	r.WeightMin = 60;
-	r.SizeMax = 195;
-	r.SizeMin = 175;
+	r.SetStats("HighElf", 100, 150, 8, 21, 13, 80, 60, 195, 175);
 	return r;
 }
 Race Serpentfolk() {
 	Race r;
-	r.RaceName = "Serpentfolk";
-	r.MaxHealth = 100;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 110;
-	r.Mana = r.MaxMana;
-	r.Strength = 9;
-	r.Intelligence = 16;
-	r.Agility = 13;
-	r.WeightMax = 100;
-	r.WeightMin = 50;
-	r.SizeMax = 210;
-	r.SizeMin = 160;
+	r.SetStats("Serpentfolk", 100, 110, 9, 16, 13, 100, 50, 210, 160);
 	return r;
 }
 Race Error() {
 	Race r;
-	r.RaceName = "Error";
-	r.MaxHealth = 1000000;
-	r.Health = r.MaxHealth;
-	r.MaxMana = 1000000;
-	r.Mana = r.MaxMana;
-	r.Strength = 100;
-	r.Intelligence = 1000000;
-	r.Agility = 1000000;
-	r.WeightMax = 1000000;
-	r.WeightMin = 0;
-	r.SizeMax = 1000000;
-	r.SizeMin = 0;
+	r.SetStats("Debug", 1000000, 1000000, 1000000, 1000000, 1000000, 1000000, 0, 1000000, 0);
 	return r;
 }
 

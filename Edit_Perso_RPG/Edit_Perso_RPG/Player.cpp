@@ -26,12 +26,12 @@ Player::Player(std::string _Pseudo) {
 
 void Player::Choose() {
     Random rd;
-    int Dice=0;
+    int Dice = 0;
     int DiceHealth = 0, DiceMana = 0, DiceStrength = 0, DiceIntelligence = 0, DiceAgility = 0;
     int Tempo = 0, Select = 0;
     Race r;
     Race PlayerChoix = r.SelectRace();
-    std::cout << "\nYou Select : " << PlayerChoix.RaceName << "\n\n";
+    std::cout << "\nYou Select : " << PlayerChoix.GetRaceName() << "\n\n";
     Class c;
     Class PlayerChoixC = c.SelectClass();
     std::cout << "\nYou Select : " << PlayerChoixC.ClassName << "\n";
@@ -89,19 +89,19 @@ void Player::Choose() {
         }
     }
     ClassName = PlayerChoixC.ClassName;
-    RaceName = PlayerChoix.RaceName;
-    MaxHealth = PlayerChoix.MaxHealth + PlayerChoixC.HealthBonus + DiceHealth;
-    Health = PlayerChoix.Health + PlayerChoixC.HealthBonus + DiceHealth;
-    MaxMana = PlayerChoix.MaxMana + PlayerChoixC.ManaBonus + DiceMana;
-    Mana = PlayerChoix.Mana + PlayerChoixC.ManaBonus + DiceMana;
-    Strength = PlayerChoix.Strength + PlayerChoixC.StrengthBonus + DiceStrength;
-    Intelligence = PlayerChoix.Intelligence + PlayerChoixC.IntelligenceBonus + DiceIntelligence;
-    Agility = PlayerChoix.Agility + PlayerChoixC.AgilityBonus + DiceAgility;
+    RaceName = PlayerChoix.GetRaceName();
+    MaxHealth = PlayerChoix.GetMaxHealth() + PlayerChoixC.HealthBonus + DiceHealth;
+    Health = PlayerChoix.GetHealth() + PlayerChoixC.HealthBonus + DiceHealth;
+    MaxMana = PlayerChoix.GetMaxMana() + PlayerChoixC.ManaBonus + DiceMana;
+    Mana = PlayerChoix.GetMana() + PlayerChoixC.ManaBonus + DiceMana;
+    Strength = PlayerChoix.GetStrength() + PlayerChoixC.StrengthBonus + DiceStrength;
+    Intelligence = PlayerChoix.GetIntelligence() + PlayerChoixC.IntelligenceBonus + DiceIntelligence;
+    Agility = PlayerChoix.GetAgility() + PlayerChoixC.AgilityBonus + DiceAgility;
     PourcentageCritique = 1;
-    SizeMax = PlayerChoix.SizeMax;
-    SizeMin = PlayerChoix.SizeMin;
-    WeightMax = PlayerChoix.WeightMax;
-    WeightMin = PlayerChoix.WeightMin;
+    SizeMax = PlayerChoix.GetSizeMax();
+    SizeMin = PlayerChoix.GetSizeMin();
+    WeightMax = PlayerChoix.GetWeightMax();
+    WeightMin = PlayerChoix.GetWeightMin();
 }
 
 std::string Player::Tostring(int Size, int Weight) {

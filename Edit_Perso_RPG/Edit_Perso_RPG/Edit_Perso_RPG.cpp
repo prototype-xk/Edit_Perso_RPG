@@ -198,8 +198,7 @@ int main()
     std::cout << "CriticalChance: " << myStaff.GetCriticalChance() << std::endl;
     std::cout << "CriticalDamage: " << myStaff.GetCriticalDamage() << std::endl;
 
-    std::cout << "\n\n\n All Armor : \n\n\n\n";
-
+    std::cout << "\n";
     Staff myStaff1 = SpiderStaff();
 
     // On affiche ses stats
@@ -238,7 +237,7 @@ int main()
     std::cout << "CriticalChance: " << myStaff3.GetCriticalChance() << std::endl;
     std::cout << "CriticalDamage: " << myStaff3.GetCriticalDamage() << std::endl;
 
-    std::cout << "\n";
+    std::cout << "\n\n\n All Armor : \n\n\n\n";
     Armor myArmor = Debug();
     std::cout << "Weapon: " << myArmor.GetName() << std::endl;
     std::cout << "Resistance: " << myArmor.GetResistance() << std::endl;
