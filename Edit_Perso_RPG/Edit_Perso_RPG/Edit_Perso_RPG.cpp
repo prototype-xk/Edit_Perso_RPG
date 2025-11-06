@@ -2,6 +2,7 @@
 #include <string>
 #include "Player.h"
 #include "Arme.h"
+#include "Armor.h"
 
 int main()
 {
@@ -197,7 +198,8 @@ int main()
     std::cout << "CriticalChance: " << myStaff.GetCriticalChance() << std::endl;
     std::cout << "CriticalDamage: " << myStaff.GetCriticalDamage() << std::endl;
 
-    std::cout << "\n";
+    std::cout << "\n\n\n All Armor : \n\n\n\n";
+
     Staff myStaff1 = SpiderStaff();
 
     // On affiche ses stats
@@ -235,4 +237,36 @@ int main()
     std::cout << "Mana: " << myStaff3.GetMana() << std::endl;
     std::cout << "CriticalChance: " << myStaff3.GetCriticalChance() << std::endl;
     std::cout << "CriticalDamage: " << myStaff3.GetCriticalDamage() << std::endl;
+
+    std::cout << "\n";
+    Armor myArmor = Debug();
+    std::cout << "Weapon: " << myArmor.GetName() << std::endl;
+    std::cout << "Resistance: " << myArmor.GetResistance() << std::endl;
+    std::cout << "Rarity: " << myArmor.GetRarity() << std::endl;
+    std::cout << "Mana: " << myArmor.GetMana() << std::endl;
+    std::cout << "CriticalChance: " << myArmor.GetCriticalChance() << std::endl;
+
+    std::cout << "\n";
+    Armor myArmor1 = Mage();
+    std::cout << "Weapon: " << myArmor1.GetName() << std::endl;
+    std::cout << "Resistance: " << myArmor1.GetResistance() << std::endl;
+    std::cout << "Rarity: " << myArmor1.GetRarity() << std::endl;
+    std::cout << "Mana: " << myArmor1.GetMana() << std::endl;
+    std::cout << "CriticalChance: " << myArmor1.GetCriticalChance() << std::endl;
+
+    std::cout << "\n";
+    Armor myArmor2 = Tank();
+    std::cout << "Weapon: " << myArmor2.GetName() << std::endl;
+    std::cout << "Resistance: " << myArmor2.GetResistance() << std::endl;
+    std::cout << "Rarity: " << myArmor2.GetRarity() << std::endl;
+    std::cout << "Mana: " << myArmor2.GetMana() << std::endl;
+    std::cout << "CriticalChance: " << myArmor2.GetCriticalChance() << std::endl;
+
+    std::cout << "\n";
+    Armor myArmor3 = Critical();
+    std::cout << "Weapon: " << myArmor3.GetName() << std::endl;
+    std::cout << "Resistance: " << myArmor3.GetResistance() << std::endl;
+    std::cout << "Rarity: " << myArmor3.GetRarity() << std::endl;
+    std::cout << "Mana: " << myArmor3.GetMana() << std::endl;
+    std::cout << "CriticalChance: " << myArmor3.GetCriticalChance() << std::endl;
 }
