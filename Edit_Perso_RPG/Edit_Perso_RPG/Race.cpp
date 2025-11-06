@@ -73,7 +73,7 @@ Race Elf() {
 }
 Race Dwarf() {
 	Race r;
-	r.SetStats("Dward", 140, 50, 16, 8, 7, 90, 60, 140, 120);
+	r.SetStats("Dwarf", 140, 50, 16, 8, 7, 90, 60, 140, 120);
 	return r;
 }
 Race Human() {

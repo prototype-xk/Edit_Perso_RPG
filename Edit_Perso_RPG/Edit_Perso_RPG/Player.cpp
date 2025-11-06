@@ -104,6 +104,40 @@ void Player::Choose() {
     WeightMin = PlayerChoix.GetWeightMin();
 }
 
+void Player::GetWeapon() {
+    // === Arc ===
+    if (RaceName == "Elf" || RaceName == "Human" || RaceName == "Fairy" || RaceName == "HighElf") {
+        std::cout << "Arc is usable for " << RaceName << "\n";
+    }
+    else {
+        std::cout << RaceName << " cannot use Arc\nOnline Elf / Human / Fairy / HighElf Can use\n";
+    }
+
+    // === Sword ===
+    if (RaceName == "Human" || RaceName == "Dwarf" || RaceName == "Orc" || RaceName == "Undead" || RaceName == "Draconian" || RaceName == "WereWolf") {
+        std::cout << "Sword is usable for " << RaceName << "\n";
+    }
+    else {
+        std::cout << RaceName << " cannot use Sword\nOnline Human / Dwarf / Orc / Undead / Draconian / Werewolf Can use\n";
+    }
+
+    // === Staff ===
+    if (RaceName == "Elf" || RaceName == "Human" || RaceName == "Undead" || RaceName == "Serpentfolk" || RaceName == "Draconian") {
+        std::cout << "Staff is usable for " << RaceName << "\n";
+    }
+    else {
+        std::cout << RaceName << " cannot use Staff\nOnline Elf / Human / Undead / Serpentfolk / Draconian Can use\n";
+    }
+
+    // === Scepter ===
+    if (RaceName == "Elf" || RaceName == "Fairy" || RaceName == "HighElf" || RaceName == "Draconian") {
+        std::cout << "Scepter is usable for " << RaceName << "\n";
+    }
+    else {
+        std::cout << RaceName << " cannot use Scepter\nOnline Elf / Fairy / HighElf / Draconian Can use\n";
+    }
+}
+
 std::string Player::Tostring(int Size, int Weight) {
 	std::string PlayerAsString = "=== " + Pseudo + " ===\n" +
         "Race : " + RaceName + "\n" +

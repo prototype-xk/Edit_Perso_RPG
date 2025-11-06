@@ -38,6 +38,9 @@ int main()
             }
             system("cls");
             std::cout << Joueur.Tostring(Size, Weight);
+            std::cout << "\n";
+            Joueur.GetWeapon();
+            std::cout << "\n";
             std::cout << Adversaire.Tostring();
         }
     }

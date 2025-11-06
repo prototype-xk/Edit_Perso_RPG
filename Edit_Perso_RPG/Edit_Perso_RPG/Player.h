@@ -17,6 +17,7 @@ public:
     int SizeMin;
     int WeightMax;
     int WeightMin;
+    void GetWeapon();
 
 protected:
     std::string Pseudo;
