@@ -7,156 +7,106 @@ Class::Class() { // 14 Class
     IntelligenceBonus = 0;  // Bonus Magical Power
     AgilityBonus = 0;       // Bonus Speed and Dexterity
 }
-
+void Class::SetStats(std::string _ClassName, int _HealthBonus, int _ManaBonus, int _StrengthBonus, int _IntelligenceBonus, int _AgilityBonus) {
+    ClassName = _ClassName;
+    HealthBonus = _HealthBonus;
+    ManaBonus = _ManaBonus;
+    StrengthBonus = _StrengthBonus;
+    IntelligenceBonus = _IntelligenceBonus;
+    AgilityBonus = _AgilityBonus;
+}
+const std::string Class::GetClassName() {
+    return ClassName;
+}
+const int Class::GetHealthBonus() {
+    return HealthBonus;
+}
+const int Class::GetManaBonus() {
+    return ManaBonus;
+}
+const int Class::GetStrengthBonus() {
+    return StrengthBonus;
+}
+const int Class::GetIntelligenceBonus() {
+    return IntelligenceBonus;
+}
+const int Class::GetAgilityBonus() {
+    return AgilityBonus;
+}
 
 Class Warrior() {
     Class c;
-    c.ClassName = "Warrior";
-    c.HealthBonus = 20;
-    c.ManaBonus = 0;
-    c.StrengthBonus = 3;
-    c.IntelligenceBonus = 0;
-    c.AgilityBonus = 1;
+    c.SetStats("Warrior", 20, 0, 3, 0, 1);
     return c;
 }
 Class Mage() {
     Class c;
-    c.ClassName = "Mage";
-    c.HealthBonus = 0;
-    c.ManaBonus = 40;
-    c.StrengthBonus = 0;
-    c.IntelligenceBonus = 4;
-    c.AgilityBonus = 0;
+    c.SetStats("Mage", 0, 40, 0, 4, 0);
     return c;
 }
 Class Rogue() {
     Class c;
-    c.ClassName = "Rogue";
-    c.HealthBonus = 0;
-    c.ManaBonus = 0;
-    c.StrengthBonus = 1;
-    c.IntelligenceBonus = 0;
-    c.AgilityBonus = 4;
+    c.SetStats("Rogue", 0, 0, 0, 0, 0);
     return c;
 }
 Class Cleric() {
     Class c;
-    c.ClassName = "Cleric";
-    c.HealthBonus = 10;
-    c.ManaBonus = 30;
-    c.StrengthBonus = 0;
-    c.IntelligenceBonus = 3;
-    c.AgilityBonus = 0;
+    c.SetStats("Cleric", 10, 30, 0, 3, 0);
     return c;
 }
 Class Paladin() {
     Class c;
-    c.ClassName = "Paladin";
-    c.HealthBonus = 25;
-    c.ManaBonus = 10;
-    c.StrengthBonus = 2;
-    c.IntelligenceBonus = 1;
-    c.AgilityBonus = 0;
+    c.SetStats("Paladin", 25, 10, 2, 1, 0);
     return c;
 }
 Class Ranger() {
     Class c;
-    c.ClassName = "Ranger";
-    c.HealthBonus = 0;
-    c.ManaBonus = 10;
-    c.StrengthBonus = 1;
-    c.IntelligenceBonus = 0;
-    c.AgilityBonus = 3;
+    c.SetStats("Ranger", 0, 10, 1, 0, 3);
     return c;
 }
 Class Bard() {
     Class c;
-    c.ClassName = "Bard";
-    c.HealthBonus = 0;
-    c.ManaBonus = 20;
-    c.StrengthBonus = 0;
-    c.IntelligenceBonus = 2;
-    c.AgilityBonus = 2;
+    c.SetStats("Bard", 0, 20, 0, 2, 2);
     return c;
 }
 Class Necromancer() {
     Class c;
-    c.ClassName = "Necromancer";
-    c.HealthBonus = 0;
-    c.ManaBonus = 30;
-    c.StrengthBonus = 0;
-    c.IntelligenceBonus = 4;
-    c.AgilityBonus = 0;
+    c.SetStats("Necromancer", 0, 30, 0, 4, 0);
     return c;
 }
 Class Monk() {
     Class c;
-    c.ClassName = "Monk";
-    c.HealthBonus = 10;
-    c.ManaBonus = 10;
-    c.StrengthBonus = 2;
-    c.IntelligenceBonus = 2;
-    c.AgilityBonus = 2;
+    c.SetStats("Monk", 10, 10, 2, 2, 2);
     return c;
 }
 Class Sorcerer() {
     Class c;
-    c.ClassName = "Sorcerer";
-    c.HealthBonus = 0;
-    c.ManaBonus = 50;
-    c.StrengthBonus = 0;
-    c.IntelligenceBonus = 5;
-    c.AgilityBonus = 0;
+    c.SetStats("Sorcerer", 0, 50, 0, 5, 0);
     return c;
 }
 Class Druid() {
     Class c;
-    c.ClassName = "Druid";
-    c.HealthBonus = 10;
-    c.ManaBonus = 30;
-    c.StrengthBonus = 1;
-    c.IntelligenceBonus = 3;
-    c.AgilityBonus = 0;
+    c.SetStats("Druid", 10, 30, 1, 3, 0);
     return c;
 }
 Class Barbarian() {
     Class c;
-    c.ClassName = "Barbarian";
-    c.HealthBonus = 40;
-    c.ManaBonus = 0;
-    c.StrengthBonus = 5;
-    c.IntelligenceBonus = 0;
-    c.AgilityBonus = 1;
+    c.SetStats("Barbarian", 40, 0, 5, 0, 1);
     return c;
 }
 Class Assassin() {
     Class c;
-    c.ClassName = "Assasin";
-    c.HealthBonus = 0;
-    c.ManaBonus = 0;
-    c.StrengthBonus = 2;
-    c.IntelligenceBonus = 0;
-    c.AgilityBonus = 5;
+    c.SetStats("Assassin", 0, 0, 2, 0, 5);
     return c;
 }
 Class Alchemist() {
     Class c;
-    c.ClassName = "Alchemist";
-    c.HealthBonus = 0;
-    c.ManaBonus = 25;
-    c.StrengthBonus = 0;
-    c.IntelligenceBonus = 4;
-    c.AgilityBonus = 1;
+    c.SetStats("Alchemist", 0, 25, 0, 4, 1);
     return c;
 }
-Class Uncensored() {
+Class Debug() {
     Class c;
-    c.ClassName = "Uncensored";
-    c.HealthBonus = -5000;
-    c.ManaBonus = -5000;
-    c.StrengthBonus = -10;
-    c.IntelligenceBonus = -60;
-    c.AgilityBonus = -50;
+    c.SetStats("Debug", -5000, -5000, -10, -50, -50);
     return c;
 }
 
@@ -166,57 +116,23 @@ Class Class::SelectClass() {
     std::cout << "1 - Warrior\n2 - Mage\n3 - Rogue\n4 - Cleric\n5 - Paladin\n";
     std::cout << "6 - Ranger\n7 - Bard\n8 - Necromancer\n9 - Monk\n10 - Sorcerer\n";
     std::cout << "11 - Druid\n12 - Barbarian\n13 - Assassin\n14 - Alchemist\n";
-    std::cout << "15 - Uncensored\n";
+    std::cout << "15 - Debug\n";
     std::cout << "Enter Number : ";
     std::cin >> Choix;
 
-    // Retourne directement l'objet Race correspondant
-    if (Choix == 1) {
-        return Warrior();
+    std::vector<Class> Class = { Warrior(),Mage(),Rogue(),Cleric(),Paladin(),Ranger(),Bard(),Necromancer(),Monk(),Sorcerer(),Druid(),Barbarian(),Assassin(),Alchemist(),Debug() };
+
+    if (Choix < 1 || Choix > Class.size()) {
+        Choix = 3; // Human par défaut
     }
-    else if (Choix == 2) {
-        return Mage();
+    return Class[Choix - 1];
+}
+Class Class::SelectClassOpponent() {
+    Random rd;
+    int Choix = rd.getRandomNumber(1, 14);
+    std::vector<Class> Class = { Warrior(),Mage(),Rogue(),Cleric(),Paladin(),Ranger(),Bard(),Necromancer(),Monk(),Sorcerer(),Druid(),Barbarian(),Assassin(),Alchemist(),Debug() };
+    if (Choix < 1 || Choix > Class.size()) {
+        Choix = 3; // Human par défaut
     }
-    else if (Choix == 3) {
-        return Rogue();
-    }
-    else if (Choix == 4) {
-        return Cleric();
-    }
-    else if (Choix == 5) {
-        return Paladin();
-    }
-    else if (Choix == 6) {
-        return Ranger();
-    }
-    else if (Choix == 7) {
-        return Bard();
-    }
-    else if (Choix == 8) {
-        return Necromancer();
-    }
-    else if (Choix == 9) {
-        return Monk();
-    }
-    else if (Choix == 10) {
-        return Sorcerer();
-    }
-    else if (Choix == 11) {
-        return Druid();
-    }
-    else if (Choix == 12) {
-        return Barbarian();
-    }
-    else if (Choix == 13) {
-        return Assassin();
-    }
-    else if (Choix == 14) {
-        return Alchemist();
-    }
-    else if (Choix == 15) {
-        return Uncensored();
-    }
-    else {
-        return Rogue();
-    }
+    return Class[Choix - 1];
 }

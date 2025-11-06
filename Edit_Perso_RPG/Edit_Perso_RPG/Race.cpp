@@ -14,40 +14,40 @@ Race::Race() { // 10 Races
 	SizeMin = 0;
 }
 
-std::string Race::GetRaceName() {
+const std::string Race::GetRaceName() {
 	return RaceName;
 }
-int Race::GetMaxHealth() {
+const int Race::GetMaxHealth() {
 	return MaxHealth;
 }
-int Race::GetHealth() {
+const int Race::GetHealth() {
 	return Health;
 }
-int Race::GetMaxMana() {
+const int Race::GetMaxMana() {
 	return MaxMana;
 }
-int Race::GetMana() {
+const int Race::GetMana() {
 	return Mana;
 }
-int Race::GetStrength() {
+const int Race::GetStrength() {
 	return Strength;
 }
-int Race::GetIntelligence() {
+const int Race::GetIntelligence() {
 	return Intelligence;
 }
-int Race::GetAgility() {
+const int Race::GetAgility() {
 	return Agility;
 }
-int Race::GetWeightMin() {
+const int Race::GetWeightMin() {
 	return WeightMin;
 }
-int Race::GetWeightMax() {
+const int Race::GetWeightMax() {
 	return WeightMax;
 }
-int Race::GetSizeMin() {
+const int Race::GetSizeMin() {
 	return SizeMin;
 }
-int Race::GetSizeMax() {
+const int Race::GetSizeMax() {
 	return SizeMax;
 }
 
@@ -127,45 +127,27 @@ Race Race::SelectRace() {
 	std::cout << "Select Race (No Choice going to put Human) :\n";
 	std::cout << "1 - Elf\n2 - Dwarf\n3 - Human\n4 - Orc\n5 - Fairy\n";
 	std::cout << "6 - Undead\n7 - Draconian\n8 - WereWolf\n9 - HighElf\n10 - Serpentfolk\n";
-	std::cout << "11 - Classe Test\n";
+	std::cout << "11 - Debug\n";
 	std::cout << "Enter a Number : ";
 	std::cin >> Choix;
 
-	// Retourne directement l'objet Race correspondant
-	if (Choix == 1) {
-		return Elf();
+	std::vector<Race> Races = { Elf(), Dwarf(), Human(), Orc(), Fairy(),
+								Undead(), Draconian(), WereWolf(), HighElf(), Serpentfolk(), Error() };
+
+	if (Choix < 1 || Choix > Races.size()) {
+		Choix = 3; // Human par défaut
 	}
-	else if (Choix == 2 ) {
-		return Dwarf();
+	return Races[Choix - 1];
+}
+
+Race Race::SelectRaceOpponent() {
+	Random rd;
+	int Choix = rd.getRandomNumber(1,10);
+	std::vector<Race> Races = { Elf(), Dwarf(), Human(), Orc(), Fairy(),
+								Undead(), Draconian(), WereWolf(), HighElf(), Serpentfolk(), Error() };
+
+	if (Choix < 1 || Choix > Races.size()) {
+		Choix = 3; // Human par défaut
 	}
-	else if (Choix == 3 ) {
-		return Human();
-	}
-	else if (Choix == 4 ) {
-		return Orc();
-	}
-	else if (Choix == 5 ) {
-		return Fairy();
-	}
-	else if (Choix == 6 ) {
-		return Undead();
-	}
-	else if (Choix == 7 ) {
-		return Draconian();
-	}
-	else if (Choix == 8 ) {
-		return WereWolf();
-	}
-	else if (Choix == 9 ) {
-		return HighElf();
-	}
-	else if (Choix == 10) {
-		return Serpentfolk();
-	}
-	else if (Choix == 11) {
-		return Error();
-	}
-	else {
-		return Human();
-	}
+	return Races[Choix - 1];
 }

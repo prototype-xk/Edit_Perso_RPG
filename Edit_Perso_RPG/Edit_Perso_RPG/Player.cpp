@@ -34,7 +34,7 @@ void Player::Choose() {
     std::cout << "\nYou Select : " << PlayerChoix.GetRaceName() << "\n\n";
     Class c;
     Class PlayerChoixC = c.SelectClass();
-    std::cout << "\nYou Select : " << PlayerChoixC.ClassName << "\n";
+    std::cout << "\nYou Select : " << PlayerChoixC.GetClassName() << "\n";
     Dice = rd.getRandomNumber(1, 20);
     std::cout << "\nYou throw a dice of 20 the result : " << Dice;
     while (Dice > 0) {
@@ -88,15 +88,15 @@ void Player::Choose() {
             }
         }
     }
-    ClassName = PlayerChoixC.ClassName;
+    ClassName = PlayerChoixC.GetClassName();
     RaceName = PlayerChoix.GetRaceName();
-    MaxHealth = PlayerChoix.GetMaxHealth() + PlayerChoixC.HealthBonus + DiceHealth;
-    Health = PlayerChoix.GetHealth() + PlayerChoixC.HealthBonus + DiceHealth;
-    MaxMana = PlayerChoix.GetMaxMana() + PlayerChoixC.ManaBonus + DiceMana;
-    Mana = PlayerChoix.GetMana() + PlayerChoixC.ManaBonus + DiceMana;
-    Strength = PlayerChoix.GetStrength() + PlayerChoixC.StrengthBonus + DiceStrength;
-    Intelligence = PlayerChoix.GetIntelligence() + PlayerChoixC.IntelligenceBonus + DiceIntelligence;
-    Agility = PlayerChoix.GetAgility() + PlayerChoixC.AgilityBonus + DiceAgility;
+    MaxHealth = PlayerChoix.GetMaxHealth() + PlayerChoixC.GetHealthBonus() + DiceHealth;
+    Health = PlayerChoix.GetHealth() + PlayerChoixC.GetHealthBonus() + DiceHealth;
+    MaxMana = PlayerChoix.GetMaxMana() + PlayerChoixC.GetManaBonus() + DiceMana;
+    Mana = PlayerChoix.GetMana() + PlayerChoixC.GetManaBonus() + DiceMana;
+    Strength = PlayerChoix.GetStrength() + PlayerChoixC.GetStrengthBonus() + DiceStrength;
+    Intelligence = PlayerChoix.GetIntelligence() + PlayerChoixC.GetIntelligenceBonus() + DiceIntelligence;
+    Agility = PlayerChoix.GetAgility() + PlayerChoixC.GetAgilityBonus() + DiceAgility;
     PourcentageCritique = 1;
     SizeMax = PlayerChoix.GetSizeMax();
     SizeMin = PlayerChoix.GetSizeMin();

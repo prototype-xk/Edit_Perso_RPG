@@ -1,24 +1,27 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <vector>
+#include "Random.h"
 
 class Race { // 10 Races
 public:
     Race();
-    std::string GetRaceName();
-    int GetMaxHealth();
-    int GetHealth();
-    int GetMaxMana();
-    int GetMana();
-    int GetStrength();
-    int GetIntelligence();
-    int GetAgility();
-    int GetWeightMax();
-    int GetWeightMin();
-    int GetSizeMax();
-    int GetSizeMin();
-    void SetStats(std::string _RaceName,int _MaxHealth,int _MaxMana, int _Strength, int _Intelligence, int _Agility, int _WeightMax, int _WeightMin, int _SizeMax, int _SizeMin);
+    const std::string GetRaceName();
+    const int GetMaxHealth();
+    const int GetHealth();
+    const int GetMaxMana();
+    const int GetMana();
+    const int GetStrength();
+    const int GetIntelligence();
+    const int GetAgility();
+    const int GetWeightMax();
+    const int GetWeightMin();
+    const int GetSizeMax();
+    const int GetSizeMin();
+    void SetStats(std::string _RaceName, int _MaxHealth, int _MaxMana, int _Strength, int _Intelligence, int _Agility, int _WeightMax, int _WeightMin, int _SizeMax, int _SizeMin);
     Race SelectRace();
+    Race SelectRaceOpponent();
 protected:
     std::string RaceName;
     int MaxHealth;

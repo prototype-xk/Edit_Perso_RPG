@@ -3,10 +3,12 @@
 #include "Player.h"
 #include "Arme.h"
 #include "Armor.h"
+#include "Opponent.h"
 
 int main()
 {
     std::string Pseudo;
+    Opponent Adversaire;
     int Size;
     int Weight;
     bool Verification = 1;
@@ -19,6 +21,7 @@ int main()
             Verification = 0;
             Player Joueur(Pseudo);
             Joueur.Choose();
+            Adversaire.Choose();
             while (VerificationSize == 1) {
                 std::cout << "\nSelect a Size (cm) [" << Joueur.SizeMin << " - " << Joueur.SizeMax << "]: ";
                 std::cin >> Size;
@@ -33,15 +36,16 @@ int main()
                     VerificationWeight = 0;
                 }
             }
+            system("cls");
             std::cout << Joueur.Tostring(Size, Weight);
+            std::cout << Adversaire.Tostring();
         }
     }
 
-    std::cout << "\n\n\n All Sword : \n\n\n\n";
+    /*std::cout << "\n\n\n All Sword : \n\n\n\n";
 
-    Sword mySword = IronSword();
-    
-    // On affiche ses stats
+    Sword mySword = DebugSword();
+
     std::cout << "Weapon: " << mySword.GetName() << std::endl;
     std::cout << "Damage: " << mySword.GetDamage() << std::endl;
     std::cout << "Type: " << mySword.GetType() << std::endl;
@@ -49,11 +53,10 @@ int main()
     std::cout << "TwoHandle: " << mySword.GetTwoHandle() << std::endl;
     std::cout << "CriticalChance: " << mySword.GetCriticalChance() << std::endl;
     std::cout << "CriticalDamage: " << mySword.GetCriticalDamage() << std::endl;
-
+    
     std::cout << "\n";
     Sword mySword1 = DiamondSword();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << mySword1.GetName() << std::endl;
     std::cout << "Damage: " << mySword1.GetDamage() << std::endl;
     std::cout << "Type: " << mySword1.GetType() << std::endl;
@@ -65,7 +68,6 @@ int main()
     std::cout << "\n";
     Sword mySword2 = NetheriteSword();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << mySword2.GetName() << std::endl;
     std::cout << "Damage: " << mySword2.GetDamage() << std::endl;
     std::cout << "Type: " << mySword2.GetType() << std::endl;
@@ -75,9 +77,8 @@ int main()
     std::cout << "CriticalDamage: " << mySword2.GetCriticalDamage() << std::endl;
 
     std::cout << "\n";
-    Sword mySword3 = DebugSword();
+    Sword mySword3 = IronSword();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << mySword3.GetName() << std::endl;
     std::cout << "Damage: " << mySword3.GetDamage() << std::endl;
     std::cout << "Type: " << mySword3.GetType() << std::endl;
@@ -88,9 +89,8 @@ int main()
 
     std::cout << "\n\n\n All Bow : \n\n\n\n";
 
-    Bow myBow = HunterBow();
+    Bow myBow = DebugBow();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myBow.GetName() << std::endl;
     std::cout << "Damage: " << myBow.GetDamage() << std::endl;
     std::cout << "Type: " << myBow.GetType() << std::endl;
@@ -103,7 +103,6 @@ int main()
     std::cout << "\n";
     Bow myBow1 = SpiderBow();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myBow1.GetName() << std::endl;
     std::cout << "Damage: " << myBow1.GetDamage() << std::endl;
     std::cout << "Type: " << myBow1.GetType() << std::endl;
@@ -116,7 +115,6 @@ int main()
     std::cout << "\n";
     Bow myBow2 = FireBow();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myBow2.GetName() << std::endl;
     std::cout << "Damage: " << myBow2.GetDamage() << std::endl;
     std::cout << "Type: " << myBow2.GetType() << std::endl;
@@ -127,9 +125,8 @@ int main()
     std::cout << "CriticalDamage: " << myBow2.GetCriticalDamage() << std::endl;
 
     std::cout << "\n";
-    Bow myBow3 = DebugBow();
+    Bow myBow3 = HunterBow();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myBow3.GetName() << std::endl;
     std::cout << "Damage: " << myBow3.GetDamage() << std::endl;
     std::cout << "Type: " << myBow3.GetType() << std::endl;
@@ -141,9 +138,8 @@ int main()
 
     std::cout << "\n\n\n All Scepter : \n\n\n\n";
 
-    Scepter myScepter = HunterScepter();
+    Scepter myScepter = DebugScepter();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myScepter.GetName() << std::endl;
     std::cout << "Damage: " << myScepter.GetDamage() << std::endl;
     std::cout << "Type: " << myScepter.GetType() << std::endl;
@@ -154,7 +150,6 @@ int main()
     std::cout << "\n";
     Scepter myScepter1 = SpiderScepter();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myScepter1.GetName() << std::endl;
     std::cout << "Damage: " << myScepter1.GetDamage() << std::endl;
     std::cout << "Type: " << myScepter1.GetType() << std::endl;
@@ -165,7 +160,6 @@ int main()
     std::cout << "\n";
     Scepter myScepter2 = FireScepter();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myScepter2.GetName() << std::endl;
     std::cout << "Damage: " << myScepter2.GetDamage() << std::endl;
     std::cout << "Type: " << myScepter2.GetType() << std::endl;
@@ -174,9 +168,8 @@ int main()
     std::cout << "Distance: " << myScepter2.GetDistance() << std::endl;
 
     std::cout << "\n";
-    Scepter myScepter3 = DebugScepter();
+    Scepter myScepter3 = HunterScepter();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myScepter3.GetName() << std::endl;
     std::cout << "Damage: " << myScepter3.GetDamage() << std::endl;
     std::cout << "Type: " << myScepter3.GetType() << std::endl;
@@ -188,7 +181,6 @@ int main()
 
     Staff myStaff = HunterStaff();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myStaff.GetName() << std::endl;
     std::cout << "Damage: " << myStaff.GetDamage() << std::endl;
     std::cout << "Type: " << myStaff.GetType() << std::endl;
@@ -199,9 +191,8 @@ int main()
     std::cout << "CriticalDamage: " << myStaff.GetCriticalDamage() << std::endl;
 
     std::cout << "\n";
-    Staff myStaff1 = SpiderStaff();
+    Staff myStaff1 = DebugStaff();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myStaff1.GetName() << std::endl;
     std::cout << "Damage: " << myStaff1.GetDamage() << std::endl;
     std::cout << "Type: " << myStaff1.GetType() << std::endl;
@@ -214,7 +205,6 @@ int main()
     std::cout << "\n";
     Staff myStaff2 = FireStaff();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myStaff2.GetName() << std::endl;
     std::cout << "Damage: " << myStaff2.GetDamage() << std::endl;
     std::cout << "Type: " << myStaff2.GetType() << std::endl;
@@ -225,9 +215,8 @@ int main()
     std::cout << "CriticalDamage: " << myStaff2.GetCriticalDamage() << std::endl;
 
     std::cout << "\n";
-    Staff myStaff3 = DebugStaff();
+    Staff myStaff3 = SpiderStaff();
 
-    // On affiche ses stats
     std::cout << "Weapon: " << myStaff3.GetName() << std::endl;
     std::cout << "Damage: " << myStaff3.GetDamage() << std::endl;
     std::cout << "Type: " << myStaff3.GetType() << std::endl;
@@ -238,6 +227,7 @@ int main()
     std::cout << "CriticalDamage: " << myStaff3.GetCriticalDamage() << std::endl;
 
     std::cout << "\n\n\n All Armor : \n\n\n\n";
+
     Armor myArmor = Debug();
     std::cout << "Weapon: " << myArmor.GetName() << std::endl;
     std::cout << "Resistance: " << myArmor.GetResistance() << std::endl;
@@ -267,5 +257,5 @@ int main()
     std::cout << "Resistance: " << myArmor3.GetResistance() << std::endl;
     std::cout << "Rarity: " << myArmor3.GetRarity() << std::endl;
     std::cout << "Mana: " << myArmor3.GetMana() << std::endl;
-    std::cout << "CriticalChance: " << myArmor3.GetCriticalChance() << std::endl;
+    std::cout << "CriticalChance: " << myArmor3.GetCriticalChance() << std::endl;*/
 }
