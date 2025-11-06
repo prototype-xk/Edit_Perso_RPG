@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include "Random.h"
 class Armor
 {
 public:

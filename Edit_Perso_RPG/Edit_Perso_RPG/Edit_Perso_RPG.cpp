@@ -15,9 +15,9 @@ int main()
     bool VerificationSize = 1;
     bool VerificationWeight = 1;
     while (Verification == 1) {
-        std::cout << "Select a pseudonyme (32 character Maximum) : ";
+        std::cout << "Select a pseudonyme (4 character Min - 32 character Maximum) : ";
         std::cin >> Pseudo;
-        if (Pseudo.length() <= 32) {
+        if (Pseudo.length() >= 4 && Pseudo.length() <= 32) {
             Verification = 0;
             Player Joueur(Pseudo);
             Joueur.Choose();
@@ -44,6 +44,8 @@ int main()
             std::cout << Adversaire.Tostring();
         }
     }
+
+    // Affichage De Tout Les Armes
 
     /*std::cout << "\n\n\n All Sword : \n\n\n\n";
 
