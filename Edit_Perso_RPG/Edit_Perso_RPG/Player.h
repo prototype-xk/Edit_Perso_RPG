@@ -21,6 +21,7 @@ public:
     void GetWeapon();
     Relic GetRelic();
     Potion GetPotion();
+    const std::string GetWeaponName(const Weapon& Weapon);
 
 protected:
     std::string Pseudo;
@@ -32,10 +33,14 @@ protected:
     int Strength;
     int Intelligence;
     int Agility;
-
+    
     int PourcentageCritique;
 
     std::string RaceName;
     std::string ClassName;
     std::string RelicName;
+    std::string WeaponName;
+    std::string ArmorName;
+private:
+    Bow b;
 };

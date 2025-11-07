@@ -1,2 +1,3 @@
-﻿  Object.cpp
+﻿  Player.cpp
+C:\Users\ebaloche\Documents\GitHub\Edit_Perso_RPG\Edit_Perso_RPG\Edit_Perso_RPG\Player.cpp(124,9): warning C4101: 'ChoixArm' : variable locale non référencée
   Edit_Perso_RPG.vcxproj -> C:\Users\ebaloche\Documents\GitHub\Edit_Perso_RPG\Edit_Perso_RPG\x64\Debug\Edit_Perso_RPG.exe

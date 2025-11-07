@@ -48,3 +48,4 @@ Race WereWolf();
 Race HighElf();
 Race Serpentfolk();
 Race Error();
+Race DebugA();

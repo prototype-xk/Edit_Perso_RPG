@@ -38,6 +38,9 @@ void Player::Choose() {
     std::cout << "\nYou Select : " << PlayerChoixC.GetClassName() << "\n";
     Relic re;
     Relic PlayerChoixRe = re.SelectRelic();
+    Weapon we;
+    //Weapon PlayerChoixWe ;
+    
     Dice = rd.getRandomNumber(1, 20);
     std::cout << "\nYou throw a dice of 20 the result : " << Dice;
     while (Dice > 0) {
@@ -94,6 +97,10 @@ void Player::Choose() {
     ClassName = PlayerChoixC.GetClassName();
     RaceName = PlayerChoix.GetRaceName();
     RelicName = PlayerChoixRe.GetName();
+    GetWeapon();
+    
+    WeaponName = b.GetName();
+    //ArmorName = 
     MaxHealth = PlayerChoix.GetMaxHealth() + PlayerChoixC.GetHealthBonus() + DiceHealth + PlayerChoixRe.GetHealthBonus();
     Health = PlayerChoix.GetHealth() + PlayerChoixC.GetHealthBonus() + DiceHealth + PlayerChoixRe.GetHealthBonus();
     MaxMana = PlayerChoix.GetMaxMana() + PlayerChoixC.GetManaBonus() + DiceMana + PlayerChoixRe.GetManaBonus();
@@ -109,41 +116,71 @@ void Player::Choose() {
 }
 
 void Player::GetWeapon() {
+    bool ArcPos = 0;
+    bool SwordPos = 0;
+    bool StaffPos = 0;
+    bool ScepterPos = 0;
+    int ChoixPos;
+    int ChoixArm;
     // === Arc ===
-    if (RaceName == "Elf" || RaceName == "Human" || RaceName == "Fairy" || RaceName == "HighElf") {
+    if (RaceName == "Elf" || RaceName == "Human" || RaceName == "Fairy" || RaceName == "HighElf" || RaceName == "DebugA") {
         std::cout << "Arc is usable for " << RaceName << "\n";
+        ArcPos = 1;
     }
     else {
         std::cout << RaceName << " cannot use Arc\nOnline Elf / Human / Fairy / HighElf Can use\n";
     }
 
     // === Sword ===
-    if (RaceName == "Human" || RaceName == "Dwarf" || RaceName == "Orc" || RaceName == "Undead" || RaceName == "Draconian" || RaceName == "WereWolf") {
+    if (RaceName == "Human" || RaceName == "Dwarf" || RaceName == "Orc" || RaceName == "Undead" || RaceName == "Draconian" || RaceName == "WereWolf" || RaceName == "DebugA") {
         std::cout << "Sword is usable for " << RaceName << "\n";
+        SwordPos = 1;
     }
     else {
         std::cout << RaceName << " cannot use Sword\nOnline Human / Dwarf / Orc / Undead / Draconian / Werewolf Can use\n";
     }
 
     // === Staff ===
-    if (RaceName == "Elf" || RaceName == "Human" || RaceName == "Undead" || RaceName == "Serpentfolk" || RaceName == "Draconian") {
+    if (RaceName == "Elf" || RaceName == "Human" || RaceName == "Undead" || RaceName == "Serpentfolk" || RaceName == "Draconian" || RaceName == "DebugA") {
         std::cout << "Staff is usable for " << RaceName << "\n";
+        StaffPos = 1;
     }
     else {
         std::cout << RaceName << " cannot use Staff\nOnline Elf / Human / Undead / Serpentfolk / Draconian Can use\n";
     }
 
     // === Scepter ===
-    if (RaceName == "Elf" || RaceName == "Fairy" || RaceName == "HighElf" || RaceName == "Draconian") {
+    if (RaceName == "Elf" || RaceName == "Fairy" || RaceName == "HighElf" || RaceName == "Draconian" || RaceName == "DebugA") {
         std::cout << "Scepter is usable for " << RaceName << "\n";
+        ScepterPos = 1;
     }
     else {
         std::cout << RaceName << " cannot use Scepter\nOnline Elf / Fairy / HighElf / Draconian Can use\n";
     }
+
+    std::cout << "\nSelect the type of Weapon you want : ";
+    std::cin >> ChoixPos;
+
+    if (ArcPos == 1 && ChoixPos == 1) {
+        //Bow BowChoix = b.SelectBow();
+        b.SelectBow();
+    }
+    if (SwordPos == 1 && ChoixPos == 2) {
+        Sword s;
+        Sword SwordChoix = s.SelectSword();
+    }
+    if (StaffPos == 1 && ChoixPos == 3) {
+        Staff st;
+        Staff StaffChoix = st.SelectStaff();
+    }
+    if (ScepterPos == 1 && ChoixPos == 4) {
+        Scepter sc;
+        Scepter ScepterChoix = sc.SelectScepter();
+    }
 }
 
 std::string Player::Tostring(int Size, int Weight) {
-	std::string PlayerAsString = "=== " + Pseudo + " ===\n" +
+    std::string PlayerAsString = "=== " + Pseudo + " ===\n" +
         "Race : " + RaceName + "\n" +
         "Classe : " + ClassName + "\n" +
         "Size : " + std::to_string(Size) + "\n" +
@@ -154,6 +191,8 @@ std::string Player::Tostring(int Size, int Weight) {
         "Intelligence : " + std::to_string(Intelligence) + "\n" +
         "Agility : " + std::to_string(Agility) + "\n" +
         "Critical Chance : " + std::to_string(PourcentageCritique) + "%\n" +
-        "Your Relic : " + RelicName + "\n";
+        "Your Relic : " + RelicName + "\n" +
+        "Your Weapon : " + WeaponName + "\n" +
+        "Your Armor : " + ArmorName + "\n";
 	return PlayerAsString;
 }

@@ -20,35 +20,36 @@ int main()
         std::cin >> Pseudo;
         if (Pseudo.length() >= 4 && Pseudo.length() <= 32) {
             Verification = 0;
-            Player Joueur(Pseudo);
-            Joueur.Choose();
+            Player* Joueur = new Player;
+            Joueur->Choose();
             Adversaire.Choose();
             while (VerificationSize == 1) {
-                std::cout << "\nSelect a Size (cm) [" << Joueur.SizeMin << " - " << Joueur.SizeMax << "]: ";
+                std::cout << "\nSelect a Size (cm) [" << Joueur->SizeMin << " - " << Joueur->SizeMax << "]: ";
                 std::cin >> Size;
-                if (Size >= Joueur.SizeMin && Size <= Joueur.SizeMax) {
+                if (Size >= Joueur->SizeMin && Size <= Joueur->SizeMax) {
                     VerificationSize = 0;
                 }
             }
             while (VerificationWeight == 1) {
-                std::cout << "Select a Weight (kg) [" << Joueur.WeightMin << " - " << Joueur.WeightMax << "]: ";
+                std::cout << "Select a Weight (kg) [" << Joueur->WeightMin << " - " << Joueur->WeightMax << "]: ";
                 std::cin >> Weight;
-                if (Weight >= Joueur.WeightMin && Weight <= Joueur.WeightMax) {
+                if (Weight >= Joueur->WeightMin && Weight <= Joueur->WeightMax) {
                     VerificationWeight = 0;
                 }
             }
             system("cls");
-            std::cout << Joueur.Tostring(Size, Weight);
-            std::cout << "\n";
-            Joueur.GetWeapon();
+            std::cout << Joueur->Tostring(Size, Weight);
             std::cout << "\n";
             std::cout << Adversaire.Tostring();
+            delete Joueur;
+            Joueur = nullptr;
         }
     }
-
+    
+    
     // Affichage De Tout Les Armes
 
-    /*std::cout << "\n\n\n All Potion : \n\n\n\n";
+    std::cout << "\n\n\n All Potion : \n\n\n\n";
     
     Potion myPotion = DebugPotion();
     std::cout << "Name: " << myPotion.GetName() << std::endl;
@@ -336,5 +337,5 @@ int main()
     std::cout << "Resistance: " << myArmor3.GetResistance() << std::endl;
     std::cout << "Rarity: " << myArmor3.GetRarity() << std::endl;
     std::cout << "Mana: " << myArmor3.GetMana() << std::endl;
-    std::cout << "CriticalChance: " << myArmor3.GetCriticalChance() << std::endl;*/
+    std::cout << "CriticalChance: " << myArmor3.GetCriticalChance() << std::endl;
 }

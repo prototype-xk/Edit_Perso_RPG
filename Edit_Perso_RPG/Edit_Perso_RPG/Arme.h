@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+#include <vector>
 #include <string>
 
 class Weapon
@@ -24,6 +26,7 @@ public:
 	int GetCriticalChance();
 	int GetCriticalDamage();
 	void SetStats(std::string _Name, int _Damage, std::string _Type, bool _TwoHandle, int _CritChance, int _CritDamage, std::string _Rarity);
+	Sword SelectSword();
 
 protected:
 	bool TwoHandle;
@@ -40,6 +43,7 @@ public:
 	int GetCriticalChance();
 	int GetCriticalDamage();
 	void SetStats(std::string _Name, int _Damage, int _Distance,std::string _Type, int _BowSize, int _CritChance, int _CritDamage, std::string _Rarity);
+	Bow SelectBow();
 
 protected:
 	int Distance;
@@ -55,6 +59,7 @@ public:
 	int GetMana();
 	int GetDistance();
 	void SetStats(std::string _Name, int _Damage, std::string _Type, int _Mana, int _Distance, std::string _Rarity);
+	Scepter SelectScepter();
 
 protected:
 	int Mana;
@@ -70,6 +75,7 @@ public:
 	int GetCriticalChance();
 	int GetCriticalDamage();
 	void SetStats(std::string _Name, int _Damage, std::string _Type, int _Mana, int _Distance, int _CritChance, int _CritDamage, std::string _Rarity);
+	Staff SelectStaff();
 
 protected:
 	int Mana;

@@ -122,17 +122,23 @@ Race Error() {
 	return r;
 }
 
+Race DebugA() {
+	Race r;
+	r.SetStats("DebugA", 1000000, 1000000, 1000000, 1000000, 1000000, 1000000, 0, 1000000, 0);
+	return r;
+}
+
 Race Race::SelectRace() {
 	int Choix;
 	std::cout << "Select Race (No Choice going to put Human) :\n";
 	std::cout << "1 - Elf\n2 - Dwarf\n3 - Human\n4 - Orc\n5 - Fairy\n";
 	std::cout << "6 - Undead\n7 - Draconian\n8 - WereWolf\n9 - HighElf\n10 - Serpentfolk\n";
-	std::cout << "11 - Debug\n";
+	std::cout << "11 - Debug\n12 - DebugA\n";
 	std::cout << "Enter a Number : ";
 	std::cin >> Choix;
 
 	std::vector<Race> Races = { Elf(), Dwarf(), Human(), Orc(), Fairy(),
-								Undead(), Draconian(), WereWolf(), HighElf(), Serpentfolk(), Error() };
+								Undead(), Draconian(), WereWolf(), HighElf(), Serpentfolk(), Error(), DebugA()};
 
 	if (Choix < 1 || Choix > Races.size()) {
 		Choix = 3; // Human par défaut
