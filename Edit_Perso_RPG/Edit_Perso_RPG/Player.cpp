@@ -6,6 +6,7 @@ Player::Player() {
     SizeMin = 0;            // Size of Player Minimal
     WeightMax = 0;             // Weight of Player Maximal
     WeightMin = 0;          // Weight of Player Minimal
+    RelicName = "Nothing";
 
     MaxHealth = 1;          // Max Life Point
     Health = MaxHealth;     // Actual Life Point
@@ -35,6 +36,8 @@ void Player::Choose() {
     Class c;
     Class PlayerChoixC = c.SelectClass();
     std::cout << "\nYou Select : " << PlayerChoixC.GetClassName() << "\n";
+    Relic re;
+    Relic PlayerChoixRe = re.SelectRelic();
     Dice = rd.getRandomNumber(1, 20);
     std::cout << "\nYou throw a dice of 20 the result : " << Dice;
     while (Dice > 0) {
@@ -43,7 +46,7 @@ void Player::Choose() {
         std::cout << "\nChoice : ";
         std::cin >> Select;
         if (Select == 1) {
-            std::cout << "\nFor the life";
+            std::cout << "\nHow many point did you want to attribut to life";
             std::cout << "\nChoice : ";
             std::cin >> Tempo;
             if (Dice >= Tempo) {
@@ -52,7 +55,7 @@ void Player::Choose() {
             }
         }
         else if (Select == 2) {
-            std::cout << "\nFor the Mana";
+            std::cout << "\nHow many point did you want to attribut to Mana";
             std::cout << "\nChoice : ";
             std::cin >> Tempo;
             if (Dice >= Tempo){
@@ -61,7 +64,7 @@ void Player::Choose() {
             }
         }
         else if (Select == 3) {
-            std::cout << "\nFor the Strength";
+            std::cout << "\nHow many point did you want to attribut to Strength";
             std::cout << "\nChoice : ";
             std::cin >> Tempo;
             if (Dice >= Tempo) {
@@ -70,7 +73,7 @@ void Player::Choose() {
             }
         }
         else if (Select == 4) {
-            std::cout << "\nFor the Intelligence";
+            std::cout << "\nHow many point did you want to attribut to Intelligence";
             std::cout << "\nChoice : ";
             std::cin >> Tempo;
             if (Dice >= Tempo) {
@@ -79,7 +82,7 @@ void Player::Choose() {
             }
         }
         else if (Select == 5) {
-            std::cout << "\nFor the Agility";
+            std::cout << "\nHow many point did you want to attribut to Agility";
             std::cout << "\nChoice : ";
             std::cin >> Tempo;
             if (Dice >= Tempo) {
@@ -90,10 +93,11 @@ void Player::Choose() {
     }
     ClassName = PlayerChoixC.GetClassName();
     RaceName = PlayerChoix.GetRaceName();
-    MaxHealth = PlayerChoix.GetMaxHealth() + PlayerChoixC.GetHealthBonus() + DiceHealth;
-    Health = PlayerChoix.GetHealth() + PlayerChoixC.GetHealthBonus() + DiceHealth;
-    MaxMana = PlayerChoix.GetMaxMana() + PlayerChoixC.GetManaBonus() + DiceMana;
-    Mana = PlayerChoix.GetMana() + PlayerChoixC.GetManaBonus() + DiceMana;
+    RelicName = PlayerChoixRe.GetName();
+    MaxHealth = PlayerChoix.GetMaxHealth() + PlayerChoixC.GetHealthBonus() + DiceHealth + PlayerChoixRe.GetHealthBonus();
+    Health = PlayerChoix.GetHealth() + PlayerChoixC.GetHealthBonus() + DiceHealth + PlayerChoixRe.GetHealthBonus();
+    MaxMana = PlayerChoix.GetMaxMana() + PlayerChoixC.GetManaBonus() + DiceMana + PlayerChoixRe.GetManaBonus();
+    Mana = PlayerChoix.GetMana() + PlayerChoixC.GetManaBonus() + DiceMana + PlayerChoixRe.GetManaBonus();
     Strength = PlayerChoix.GetStrength() + PlayerChoixC.GetStrengthBonus() + DiceStrength;
     Intelligence = PlayerChoix.GetIntelligence() + PlayerChoixC.GetIntelligenceBonus() + DiceIntelligence;
     Agility = PlayerChoix.GetAgility() + PlayerChoixC.GetAgilityBonus() + DiceAgility;
@@ -149,6 +153,7 @@ std::string Player::Tostring(int Size, int Weight) {
         "Strength : " + std::to_string(Strength) + "\n" +
         "Intelligence : " + std::to_string(Intelligence) + "\n" +
         "Agility : " + std::to_string(Agility) + "\n" +
-        "Critical Chance : " + std::to_string(PourcentageCritique) + "%\n";
+        "Critical Chance : " + std::to_string(PourcentageCritique) + "%\n" +
+        "Your Relic : " + RelicName + "\n";
 	return PlayerAsString;
 }

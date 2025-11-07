@@ -5,6 +5,7 @@
 #include "Race.h"
 #include "Random.h"
 #include "Arme.h"
+#include "Object.h"
 
 class Player
 {
@@ -18,6 +19,8 @@ public:
     int WeightMax;
     int WeightMin;
     void GetWeapon();
+    Relic GetRelic();
+    Potion GetPotion();
 
 protected:
     std::string Pseudo;
@@ -34,4 +37,5 @@ protected:
 
     std::string RaceName;
     std::string ClassName;
+    std::string RelicName;
 };

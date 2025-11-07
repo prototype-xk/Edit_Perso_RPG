@@ -4,6 +4,7 @@
 #include "Arme.h"
 #include "Armor.h"
 #include "Opponent.h"
+#include "Object.h"
 
 int main()
 {
@@ -47,7 +48,80 @@ int main()
 
     // Affichage De Tout Les Armes
 
-    /*std::cout << "\n\n\n All Sword : \n\n\n\n";
+    /*std::cout << "\n\n\n All Potion : \n\n\n\n";
+    
+    Potion myPotion = DebugPotion();
+    std::cout << "Name: " << myPotion.GetName() << std::endl;
+    std::cout << "Rarity: " << myPotion.GetRarity() << std::endl;
+    std::cout << "Mana: " << myPotion.GetManaRegen() << std::endl;
+    std::cout << "Health: " << myPotion.GetHealthRegen() << std::endl;
+    std::cout << "\n";
+
+    Potion myPotion1 = Regen1Potion();
+    std::cout << "Name: " << myPotion1.GetName() << std::endl;
+    std::cout << "Rarity: " << myPotion1.GetRarity() << std::endl;
+    std::cout << "Mana: " << myPotion1.GetManaRegen() << std::endl;
+    std::cout << "Health: " << myPotion1.GetHealthRegen() << std::endl;
+    std::cout << "\n";
+
+    Potion myPotion2 = Regen2Potion();
+    std::cout << "Name: " << myPotion2.GetName() << std::endl;
+    std::cout << "Rarity: " << myPotion2.GetRarity() << std::endl;
+    std::cout << "Mana: " << myPotion2.GetManaRegen() << std::endl;
+    std::cout << "Health: " << myPotion2.GetHealthRegen() << std::endl;
+    std::cout << "\n";
+
+    Potion myPotion3 = Mana1Potion();
+    std::cout << "Name: " << myPotion3.GetName() << std::endl;
+    std::cout << "Rarity: " << myPotion3.GetRarity() << std::endl;
+    std::cout << "Mana: " << myPotion3.GetManaRegen() << std::endl;
+    std::cout << "Health: " << myPotion3.GetHealthRegen() << std::endl;
+    std::cout << "\n";
+
+    Potion myPotion4 = Mana2Potion();
+    std::cout << "Name: " << myPotion4.GetName() << std::endl;
+    std::cout << "Rarity: " << myPotion4.GetRarity() << std::endl;
+    std::cout << "Mana: " << myPotion4.GetManaRegen() << std::endl;
+    std::cout << "Health: " << myPotion4.GetHealthRegen() << std::endl;
+
+    std::cout << "\n\n\n All Relic : \n\n\n\n";
+
+    Relic myRelic = DebugRelic();
+    std::cout << "Name: " << myRelic.GetName() << std::endl;
+    std::cout << "Rarity: " << myRelic.GetRarity() << std::endl;
+    std::cout << "Mana: " << myRelic.GetManaBonus() << std::endl;
+    std::cout << "Health: " << myRelic.GetHealthBonus() << std::endl;
+    std::cout << "\n";
+
+    Relic myRelic1 = SCPRelic();
+    std::cout << "Name: " << myRelic1.GetName() << std::endl;
+    std::cout << "Rarity: " << myRelic1.GetRarity() << std::endl;
+    std::cout << "Mana: " << myRelic1.GetManaBonus() << std::endl;
+    std::cout << "Health: " << myRelic1.GetHealthBonus() << std::endl;
+    std::cout << "\n";
+
+    Relic myRelic2 = ZeldaRelic();
+    std::cout << "Name: " << myRelic2.GetName() << std::endl;
+    std::cout << "Rarity: " << myRelic2.GetRarity() << std::endl;
+    std::cout << "Mana: " << myRelic2.GetManaBonus() << std::endl;
+    std::cout << "Health: " << myRelic2.GetHealthBonus() << std::endl;
+    std::cout << "\n";
+
+    Relic myRelic3 = ThorRelic();
+    std::cout << "Name: " << myRelic3.GetName() << std::endl;
+    std::cout << "Rarity: " << myRelic3.GetRarity() << std::endl;
+    std::cout << "Mana: " << myRelic3.GetManaBonus() << std::endl;
+    std::cout << "Health: " << myRelic3.GetHealthBonus() << std::endl;
+    std::cout << "\n";
+
+    Relic myRelic4 = OdinRelic();
+    std::cout << "Name: " << myRelic4.GetName() << std::endl;
+    std::cout << "Rarity: " << myRelic4.GetRarity() << std::endl;
+    std::cout << "Mana: " << myRelic4.GetManaBonus() << std::endl;
+    std::cout << "Health: " << myRelic4.GetHealthBonus() << std::endl;
+    std::cout << "\n";
+
+    std::cout << "\n\n\n All Sword : \n\n\n\n";
 
     Sword mySword = DebugSword();
 
